@@ -69,33 +69,15 @@
 
     </div>
 
+    <script src="js/helperFunction.js"></script>
     <!-- Frontend Form Handling Script -->
     <script>
-        $(document).ready(function() {
-            $('#forgot_password_form').on('submit', function(e) {
-                const accountInput = $('#username');
-                const accountError = $('#username_error');
-                const submitBtn = $('#btn_submit');
-                const btnText = $('#btn_text');
-                const accountVal = accountInput.val().trim();
-
-                // Clear previous errors
-                accountError.addClass('hidden').text('');
-                accountInput.removeClass('border-red-500');
-
-                // Client-side Validation
-                if (!accountVal) {
-                    e.preventDefault();
-                    accountError.text('Please enter your Student Number or Username.').removeClass('hidden');
-                    accountInput.addClass('border-red-500');
-                    return false;
-                }
-
-                // Loading State
-                submitBtn.prop('disabled', true).addClass('opacity-75 cursor-not-allowed');
-                btnText.text('Please wait...');
-            });
-        });
+        $("#btn_submit").on("click", () => {
+            showToast("success", "Success Toast!");
+            showToast("warning", "Warning Toast!");
+            showToast("error", "Error Toast!");
+            showToast("info", "info Toast!");
+        })
     </script>
 </body>
 
