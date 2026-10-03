@@ -81,8 +81,8 @@
             <a href="documentRequest.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Document Requests</a>
             <a href="clearance.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Clearance</a>
             <a href="report.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Report</a>
-            <a href="notifications.php" class="block px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30">Announcements</a>
-            <a href="announcements.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Notifications</a>
+            <a href="notifications.php" class="block px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30">Notifications</a>
+            <a href="announcements.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Announcements</a>
         </div>
     </header>
 
@@ -133,13 +133,6 @@
                                     <option value="bsit">BS Information Technology</option>
                                     <option value="bsis">BS Information Systems</option>
                                     <option value="graduating">Graduating Students Only</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-1">Priority Level</label>
-                                <select class="w-full border border-gray-200 rounded-md px-3 py-2 bg-white focus:outline-none focus:ring-1 focus:ring-brand-secondary">
-                                    <option value="normal">Normal Priority</option>
-                                    <option value="high">High / Urgent</option>
                                 </select>
                             </div>
                         </div>
@@ -227,7 +220,6 @@
                             <tr class="bg-gray-50/80 border-b border-gray-100 text-gray-500 uppercase font-semibold">
                                 <th class="py-3 px-5 min-w-[200px]">Title & Content Preview</th>
                                 <th class="py-3 px-5 text-center whitespace-nowrap">Audience</th>
-                                <th class="py-3 px-5 text-center whitespace-nowrap">Priority</th>
                                 <th class="py-3 px-5 whitespace-nowrap">Date Published</th>
                                 <th class="py-3 px-5 text-right whitespace-nowrap">Actions</th>
                             </tr>
@@ -241,9 +233,6 @@
                                 </td>
                                 <td class="py-3.5 px-5 text-center whitespace-nowrap">
                                     <span class="px-2 py-0.5 rounded-md text-[10px] font-semibold bg-gray-100 text-gray-700">All Students</span>
-                                </td>
-                                <td class="py-3.5 px-5 text-center whitespace-nowrap">
-                                    <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800">High Priority</span>
                                 </td>
                                 <td class="py-3.5 px-5 whitespace-nowrap text-gray-500">Oct 02, 2026</td>
                                 <td class="py-3.5 px-5 text-right space-x-1 whitespace-nowrap">
@@ -260,9 +249,6 @@
                                 </td>
                                 <td class="py-3.5 px-5 text-center whitespace-nowrap">
                                     <span class="px-2 py-0.5 rounded-md text-[10px] font-semibold bg-blue-50 text-blue-700">Graduating</span>
-                                </td>
-                                <td class="py-3.5 px-5 text-center whitespace-nowrap">
-                                    <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-gray-100 text-gray-700">Normal</span>
                                 </td>
                                 <td class="py-3.5 px-5 whitespace-nowrap text-gray-500">Sep 25, 2026</td>
                                 <td class="py-3.5 px-5 text-right space-x-1 whitespace-nowrap">
@@ -314,7 +300,7 @@
                                     <span class="px-2 py-0.5 rounded-md text-[10px] font-semibold bg-amber-50 text-amber-700 border border-amber-200">Clearance Notice</span>
                                 </td>
                                 <td class="py-3.5 px-5 text-center whitespace-nowrap">
-                                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">Delivered</span>
+                                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">Read</span>
                                 </td>
                                 <td class="py-3.5 px-5 whitespace-nowrap text-gray-500">Oct 03, 2026</td>
                                 <td class="py-3.5 px-5 text-right space-x-1 whitespace-nowrap">
@@ -335,7 +321,7 @@
                                     <span class="px-2 py-0.5 rounded-md text-[10px] font-semibold bg-blue-50 text-blue-700 border border-blue-200">Document Request</span>
                                 </td>
                                 <td class="py-3.5 px-5 text-center whitespace-nowrap">
-                                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">Delivered</span>
+                                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">Unread</span>
                                 </td>
                                 <td class="py-3.5 px-5 whitespace-nowrap text-gray-500">Sep 29, 2026</td>
                                 <td class="py-3.5 px-5 text-right space-x-1 whitespace-nowrap">

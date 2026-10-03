@@ -198,7 +198,6 @@
                             <th class="py-3 px-5">Subject Title</th>
                             <th class="py-3 px-5 text-center">Units</th>
                             <th class="py-3 px-5 text-center">Grade</th>
-                            <th class="py-3 px-5 text-center">Status</th>
                             <th class="py-3 px-5 text-right">Evaluation</th>
                         </tr>
                     </thead>
@@ -208,9 +207,6 @@
                             <td class="py-3.5 px-5">System Analysis & Design</td>
                             <td class="py-3.5 px-5 text-center font-semibold text-brand-dark">3.0</td>
                             <td class="py-3.5 px-5 text-center font-bold text-brand-dark text-sm">1.25</td>
-                            <td class="py-3.5 px-5 text-center">
-                                <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-100 text-emerald-800">Released</span>
-                            </td>
                             <td class="py-3.5 px-5 text-right font-semibold text-emerald-700">Passed</td>
                         </tr>
                         <tr class="hover:bg-gray-50/50 transition-colors">
@@ -218,9 +214,6 @@
                             <td class="py-3.5 px-5">Applications Development & Emerging Tech</td>
                             <td class="py-3.5 px-5 text-center font-semibold text-brand-dark">3.0</td>
                             <td class="py-3.5 px-5 text-center font-bold text-brand-dark text-sm">1.50</td>
-                            <td class="py-3.5 px-5 text-center">
-                                <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-100 text-emerald-800">Released</span>
-                            </td>
                             <td class="py-3.5 px-5 text-right font-semibold text-emerald-700">Passed</td>
                         </tr>
                         <tr class="hover:bg-gray-50/50 transition-colors">
@@ -228,9 +221,6 @@
                             <td class="py-3.5 px-5">Calculus I</td>
                             <td class="py-3.5 px-5 text-center font-semibold text-brand-dark">3.0</td>
                             <td class="py-3.5 px-5 text-center font-bold text-brand-dark text-sm">1.75</td>
-                            <td class="py-3.5 px-5 text-center">
-                                <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-100 text-emerald-800">Released</span>
-                            </td>
                             <td class="py-3.5 px-5 text-right font-semibold text-emerald-700">Passed</td>
                         </tr>
                         <tr class="hover:bg-gray-50/50 transition-colors">
@@ -238,9 +228,6 @@
                             <td class="py-3.5 px-5">Operating Systems</td>
                             <td class="py-3.5 px-5 text-center font-semibold text-brand-dark">3.0</td>
                             <td class="py-3.5 px-5 text-center font-bold text-brand-dark text-sm">1.50</td>
-                            <td class="py-3.5 px-5 text-center">
-                                <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-100 text-emerald-800">Released</span>
-                            </td>
                             <td class="py-3.5 px-5 text-right font-semibold text-emerald-700">Passed</td>
                         </tr>
                     </tbody>

@@ -161,16 +161,11 @@
         </section>
 
         <!-- Summary Metrics -->
-        <section class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <section class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="bg-white border border-gray-200 rounded-md p-5 shadow-xs space-y-2">
                 <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Total Active Users</span>
                 <p class="text-2xl font-bold text-brand-dark">4,120 Accounts</p>
                 <p class="text-xs text-gray-400">across 4 core roles</p>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-md p-5 shadow-xs space-y-2">
-                <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">System Events (24h)</span>
-                <p class="text-2xl font-bold text-brand-dark">12,480 Logged</p>
-                <p class="text-xs text-brand-secondary font-medium">Normal activity volume</p>
             </div>
             <div class="bg-white border border-gray-200 rounded-md p-5 shadow-xs space-y-2">
                 <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Failed Auth Alerts</span>

@@ -135,10 +135,6 @@
                             <span class="font-bold text-gray-700">3,120</span>
                         </div>
                         <div>
-                            <span class="text-gray-400 block">Faculty</span>
-                            <span class="font-bold text-gray-700">284</span>
-                        </div>
-                        <div>
                             <span class="text-gray-400 block">Admins</span>
                             <span class="font-bold text-gray-700">78</span>
                         </div>

@@ -112,76 +112,6 @@
 
         <!-- Notifications List Feed -->
         <section class="space-y-3" id="container_notifications_list">
-
-            <!-- ITEM 1: UNREAD - ACADEMIC GRADES -->
-            <div class="notification-item unread bg-brand-accent/20 border-l-4 border-l-brand-primary border-y border-r border-gray-200 rounded-r-md p-4 shadow-xs hover:bg-brand-accent/30 transition-colors flex items-start justify-between gap-4" data-category="grades">
-                <div class="flex items-start space-x-3.5">
-                    <div class="p-2.5 bg-brand-primary/10 text-brand-primary rounded-md shrink-0 mt-0.5">
-                        <i data-lucide="award" class="w-5 h-5"></i>
-                    </div>
-                    <div class="space-y-1">
-                        <div class="flex items-center space-x-2">
-                            <h2 class="text-xs font-bold text-brand-dark">Grade Evaluation Released</h2>
-                            <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-brand-primary text-white">Grades</span>
-                            <span class="w-2 h-2 rounded-full bg-red-600 inline-block" title="Unread"></span>
-                        </div>
-                        <p class="text-xs text-gray-700">Official grades for <strong>1st Semester, AY 2026-2027</strong> have been evaluated and published by the Registrar.</p>
-                        <p class="text-[10px] text-gray-500">Today at 09:30 AM</p>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-2 shrink-0">
-                    <button type="button" class="btn-mark-read p-1 text-gray-400 hover:text-brand-primary rounded" title="Mark as Read">
-                        <i data-lucide="check" class="w-4 h-4"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- ITEM 2: UNREAD - CLEARANCE APPROVAL -->
-            <div class="notification-item unread bg-emerald-50/60 border-l-4 border-l-emerald-600 border-y border-r border-gray-200 rounded-r-md p-4 shadow-xs hover:bg-emerald-50 transition-colors flex items-start justify-between gap-4" data-category="clearance">
-                <div class="flex items-start space-x-3.5">
-                    <div class="p-2.5 bg-emerald-100 text-emerald-800 rounded-md shrink-0 mt-0.5">
-                        <i data-lucide="shield-check" class="w-5 h-5"></i>
-                    </div>
-                    <div class="space-y-1">
-                        <div class="flex items-center space-x-2">
-                            <h2 class="text-xs font-bold text-brand-dark">University Library Clearance Approved</h2>
-                            <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-emerald-100 text-emerald-800">Clearance</span>
-                            <span class="w-2 h-2 rounded-full bg-red-600 inline-block" title="Unread"></span>
-                        </div>
-                        <p class="text-xs text-gray-700">The Library Department marked your clearance status as <strong>Approved</strong>. No outstanding book returns or fines.</p>
-                        <p class="text-[10px] text-gray-500">Yesterday at 02:15 PM</p>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-2 shrink-0">
-                    <button type="button" class="btn-mark-read p-1 text-gray-400 hover:text-brand-primary rounded" title="Mark as Read">
-                        <i data-lucide="check" class="w-4 h-4"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- ITEM 3: UNREAD - DOCUMENT READY -->
-            <div class="notification-item unread bg-brand-accent/20 border-l-4 border-l-brand-primary border-y border-r border-gray-200 rounded-r-md p-4 shadow-xs hover:bg-brand-accent/30 transition-colors flex items-start justify-between gap-4" data-category="requests">
-                <div class="flex items-start space-x-3.5">
-                    <div class="p-2.5 bg-blue-100 text-blue-800 rounded-md shrink-0 mt-0.5">
-                        <i data-lucide="file-check-2" class="w-5 h-5"></i>
-                    </div>
-                    <div class="space-y-1">
-                        <div class="flex items-center space-x-2">
-                            <h2 class="text-xs font-bold text-brand-dark">Document Ready for Download</h2>
-                            <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-blue-100 text-blue-800">Requests</span>
-                            <span class="w-2 h-2 rounded-full bg-red-600 inline-block" title="Unread"></span>
-                        </div>
-                        <p class="text-xs text-gray-700">Request <strong>REQ-2026-001 (Certificate of Enrollment)</strong> has been verified. You can now download the official PDF copy.</p>
-                        <p class="text-[10px] text-gray-500">Oct 01, 2026 at 11:00 AM</p>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-2 shrink-0">
-                    <button type="button" class="btn-mark-read p-1 text-gray-400 hover:text-brand-primary rounded" title="Mark as Read">
-                        <i data-lucide="check" class="w-4 h-4"></i>
-                    </button>
-                </div>
-            </div>
-
             <!-- ITEM 4: READ - ACCOUNTING / TUITION REMINDER -->
             <div class="notification-item read bg-white border border-gray-200 rounded-md p-4 shadow-xs hover:bg-gray-50/80 transition-colors flex items-start justify-between gap-4 opacity-90" data-category="system">
                 <div class="flex items-start space-x-3.5">
@@ -202,22 +132,6 @@
                 </div>
             </div>
 
-            <!-- ITEM 5: READ - REJECTED REQUEST -->
-            <div class="notification-item read bg-white border border-gray-200 rounded-md p-4 shadow-xs hover:bg-gray-50/80 transition-colors flex items-start justify-between gap-4 opacity-90" data-category="requests">
-                <div class="flex items-start space-x-3.5">
-                    <div class="p-2.5 bg-red-100 text-red-800 rounded-md shrink-0 mt-0.5">
-                        <i data-lucide="alert-circle" class="w-5 h-5"></i>
-                    </div>
-                    <div class="space-y-1">
-                        <div class="flex items-center space-x-2">
-                            <h2 class="text-xs font-bold text-brand-dark">Request Disapproved: REQ-2026-005</h2>
-                            <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-red-100 text-red-800">Requests</span>
-                        </div>
-                        <p class="text-xs text-gray-600">Your request for Form 137 was disapproved due to an unresolved Library hold. Please settle library clearance first.</p>
-                        <p class="text-[10px] text-gray-400">Sep 15, 2026 at 04:45 PM</p>
-                    </div>
-                </div>
-            </div>
         </section>
 
     </main>

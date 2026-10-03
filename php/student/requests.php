@@ -266,16 +266,6 @@
                             <td class="py-3.5 px-5 text-right text-gray-500">Printing and signing document</td>
                         </tr>
 
-                        <!-- 6. READY FOR RELEASE -->
-                        <tr class="hover:bg-gray-50/50 transition-colors">
-                            <td class="py-3.5 px-5 font-bold text-brand-dark">DR-2026-0006</td>
-                            <td class="py-3.5 px-5">Certificate of Enrollment (COE)</td>
-                            <td class="py-3.5 px-5 text-gray-500">Sep 20, 2026</td>
-                            <td class="py-3.5 px-5 text-center text-gray-700">Paid</td>
-                            <td class="py-3.5 px-5 text-center text-gray-700">Ready for Release</td>
-                            <td class="py-3.5 px-5 text-right text-gray-500">Available for pickup at Registrar Window 2</td>
-                        </tr>
-
                         <!-- 7. COMPLETED -->
                         <tr class="hover:bg-gray-50/50 transition-colors">
                             <td class="py-3.5 px-5 font-bold text-brand-dark">DR-2026-0007</td>
@@ -312,7 +302,6 @@
             <!-- Footer Policy Note -->
             <div class="p-4 bg-gray-50/80 border-t border-gray-100 flex items-center space-x-2 text-xs text-gray-500">
                 <i data-lucide="info" class="w-4 h-4 text-brand-secondary shrink-0"></i>
-                <p>Digital downloads are available for 30 days following approval. Physical copies require university ID verification upon pickup.</p>
             </div>
         </section>
 

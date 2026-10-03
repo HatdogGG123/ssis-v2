@@ -131,7 +131,7 @@
         <div class="border-b border-gray-200">
             <nav class="-mb-px flex space-x-6 text-xs font-semibold" aria-label="Tabs">
                 <button id="tab_btn_verification" class="w-full sm:w-fit tab-btn py-3 px-1 border-b-2 border-brand-primary text-brand-primary flex items-center space-x-2">
-                    <p class="text-center">Payment Verification & Clearance</p>
+                    <p class="text-center">Payment Verification</p>
                 </button>
                 <button id="tab_btn_transactions" class="w-full sm:w-fit tab-btn py-3 px-1 border-b-2 border-transparent text-gray-500 hover:text-brand-primary hover:border-gray-300 flex items-center space-x-2">
                     <p class="text-center">Transaction History</p>
@@ -193,34 +193,31 @@
                     <table id="table_clearance" class="w-full text-left text-xs border-collapse min-w-[640px]">
                         <thead>
                             <tr class="bg-gray-50/80 border-b border-gray-100 text-gray-500 uppercase tracking-wider font-semibold">
-                                <th class="py-3 px-3 w-28 whitespace-nowrap">Student ID</th>
+                                <th class="py-3 px-3 w-28 whitespace-nowrap">Request No.</th>
                                 <th class="py-3 px-3 min-w-[130px] max-w-[160px]">Student Name</th>
-                                <th class="py-3 px-3 min-w-[140px] max-w-[180px]">Program & Year</th>
-                                <th class="py-3 px-3 w-24 text-right whitespace-nowrap">Unpaid Balance</th>
-                                <th class="py-3 px-3 min-w-[160px] max-w-[220px]">Hold Reason / Item</th>
-                                <th class="py-3 px-3 w-28 text-center whitespace-nowrap">Clearance Status</th>
+                                <th class="py-3 px-3 min-w-[130px] max-w-[160px]">Document</th>
+                                <th class="py-3 px-3 min-w-[140px] max-w-[180px]">Payment Method</th>
+                                <th class="py-3 px-3 min-w-[140px] max-w-[180px]">Amount</th>
                                 <th class="py-3 px-3 w-32 text-right whitespace-nowrap">Actions</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-100 text-gray-700 font-medium">
                             <!-- Row 1: Uncleared (On Hold) -->
                             <tr class="hover:bg-gray-50/50 transition-colors">
-                                <td class="py-3 px-3 font-display font-bold text-brand-dark whitespace-nowrap">2026-00012</td>
+                                <td class="py-3 px-3 w-28 font-display font-bold text-brand-dark whitespace-nowrap">2026-00012</td>
                                 <td class="py-3 px-3 min-w-[130px] max-w-[160px]">
                                     <div class="font-bold text-brand-dark truncate" title="Pedro Penduko">Pedro Penduko</div>
                                 </td>
-                                <td class="py-3 px-3 min-w-[140px] max-w-[180px]">
+                                <td class="py-3 px-3 min-w-[130px] max-w-[160px]">
                                     <div class="truncate text-gray-600" title="BS Computer Science (3rd Yr)">BS Computer Science (3rd Yr)</div>
                                 </td>
-                                <td class="py-3 px-3 text-right font-bold text-red-700 whitespace-nowrap">₱2,450.00</td>
-                                <td class="py-3 px-3 min-w-[160px] max-w-[220px]">
-                                    <div class="font-semibold text-gray-800 truncate" title="Unpaid Tuition Fee Balance">Unpaid Tuition Fee Balance</div>
-                                    <div class="text-[10px] text-gray-500 truncate" title="Issued by: M. Santos • Oct 1, 2026">Issued by: M. Santos • Oct 1, 2026</div>
+                                <td class="py-3 px-3 min-w-[140px] max-w-[180px]">
+                                    <div class="truncate text-gray-600">Over the Counter</div>
                                 </td>
-                                <td class="py-3 px-3 text-center whitespace-nowrap">
-                                    <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-semibold bg-amber-100 text-amber-800">Uncleared (Hold)</span>
+                                <td class="py-3 px-3 min-w-[140px] max-w-[180px]">
+                                    ₱2,450.00
                                 </td>
-                                <td class="py-3 px-3 text-right whitespace-nowrap space-x-1">
+                                <td class="py-3 px-3 w-32 text-right whitespace-nowrap space-x-1">
                                     <button type="button" onclick="openReleaseModal('CLEAR-2026-001', 'Pedro Penduko', '2026-00012', 2450.00)" class="px-2 py-1 bg-emerald-700 text-white rounded text-[11px] font-semibold hover:bg-emerald-800 transition-colors">Clear</button>
                                     <button type="button" onclick="openDetailsModal('2026-00012', 'Pedro Penduko', '2,450.00', 'Unpaid Tuition Fee Balance', 'Uncleared')" class="px-2 py-1 border border-gray-200 text-gray-600 rounded text-[11px] font-semibold hover:bg-gray-50 transition-colors">View</button>
                                 </td>
@@ -228,22 +225,20 @@
 
                             <!-- Row 2: Pending Review -->
                             <tr class="hover:bg-gray-50/50 transition-colors">
-                                <td class="py-3 px-3 font-display font-bold text-brand-dark whitespace-nowrap">2026-00045</td>
+                                <td class="py-3 px-3 w-28 font-display font-bold text-brand-dark whitespace-nowrap">2026-00045</td>
                                 <td class="py-3 px-3 min-w-[130px] max-w-[160px]">
                                     <div class="font-bold text-brand-dark truncate" title="Juan Dela Cruz">Juan Dela Cruz</div>
                                 </td>
+                                <td class="py-3 px-3 min-w-[130px] max-w-[160px]">
+                                    <div class="truncate text-gray-600" title="Transcript of Records (2 copies)">Transcript of Records (2 copies)</div>
+                                </td>
                                 <td class="py-3 px-3 min-w-[140px] max-w-[180px]">
-                                    <div class="truncate text-gray-600" title="BS Information Technology (2nd Yr)">BS Info Tech (2nd Yr)</div>
+                                    <div class="truncate text-gray-600">GCash</div>
                                 </td>
-                                <td class="py-3 px-3 text-right font-bold text-blue-700 whitespace-nowrap">₱150.00</td>
-                                <td class="py-3 px-3 min-w-[160px] max-w-[220px]">
-                                    <div class="font-semibold text-gray-800 truncate" title="Document Processing Fee">Document Processing Fee</div>
-                                    <div class="text-[10px] text-blue-600 font-semibold truncate" title="Proof uploaded (Ref: 9021849201)">Proof uploaded (Ref: 9021849201)</div>
+                                <td class="py-3 px-3 min-w-[140px] max-w-[180px]">
+                                    ₱150.00
                                 </td>
-                                <td class="py-3 px-3 text-center whitespace-nowrap">
-                                    <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-semibold bg-blue-100 text-blue-800">Pending Review</span>
-                                </td>
-                                <td class="py-3 px-3 text-right whitespace-nowrap space-x-1">
+                                <td class="py-3 px-3 w-32 text-right whitespace-nowrap space-x-1">
                                     <button type="button" onclick="openVerifyModal('DR-2026-0012', 'Juan Dela Cruz (2026-00045)', 'Transcript of Records (2 copies)', 'GCash', '9021849201', 150.00)" class="px-2 py-1 bg-blue-600 text-white rounded text-[11px] font-semibold hover:bg-blue-700 transition-colors">Review</button>
                                     <button type="button" onclick="openDetailsModal('2026-00045', 'Juan Dela Cruz', '150.00', 'Document Processing Fee', 'Pending Review')" class="px-2 py-1 border border-gray-200 text-gray-600 rounded text-[11px] font-semibold hover:bg-gray-50 transition-colors">View</button>
                                 </td>
@@ -251,21 +246,20 @@
 
                             <!-- Row 3: Cleared -->
                             <tr class="hover:bg-gray-50/50 transition-colors">
-                                <td class="py-3 px-3 font-display font-bold text-brand-dark whitespace-nowrap">2026-00088</td>
+                                <td class="py-3 px-3 w-28 font-display font-bold text-brand-dark whitespace-nowrap">2026-00088</td>
                                 <td class="py-3 px-3 min-w-[130px] max-w-[160px]">
                                     <div class="font-bold text-brand-dark truncate" title="Maria Clara">Maria Clara</div>
                                 </td>
-                                <td class="py-3 px-3 min-w-[140px] max-w-[180px]">
+                                <td class="py-3 px-3 min-w-[130px] max-w-[160px]">
                                     <div class="truncate text-gray-600" title="BS Business Administration (4th Yr)">BS Business Admin (4th Yr)</div>
                                 </td>
-                                <td class="py-3 px-3 text-right font-bold text-gray-400 whitespace-nowrap">₱0.00</td>
-                                <td class="py-3 px-3 min-w-[160px] max-w-[220px]">
-                                    <span class="text-xs text-gray-400 italic block truncate">No Active Holds</span>
+                                <td class="py-3 px-3 min-w-[140px] max-w-[180px]">
+                                    <div class="truncate text-gray-600">N/A</div>
                                 </td>
-                                <td class="py-3 px-3 text-center whitespace-nowrap">
-                                    <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-semibold bg-emerald-100 text-emerald-800">Cleared</span>
+                                <td class="py-3 px-3 min-w-[140px] max-w-[180px]">
+                                    ₱0.00
                                 </td>
-                                <td class="py-3 px-3 text-right whitespace-nowrap">
+                                <td class="py-3 px-3 w-32 text-right whitespace-nowrap">
                                     <button type="button" onclick="openDetailsModal('2026-00088', 'Maria Clara', '0.00', 'None', 'Cleared')" class="px-2 py-1 border border-gray-200 text-gray-600 rounded text-[11px] font-semibold hover:bg-gray-50 transition-colors">View History</button>
                                 </td>
                             </tr>
@@ -423,11 +417,6 @@
                         <label class="block text-xs font-semibold text-gray-700 mb-1">Verification Date</label>
                         <input type="text" readonly value="October 3, 2026" class="w-full px-3 py-1.5 text-xs bg-gray-100 font-medium text-gray-600 border border-gray-200 rounded-md focus:outline-none cursor-not-allowed">
                     </div>
-                </div>
-
-                <div>
-                    <label for="verify_remarks" class="block text-xs font-semibold text-gray-700 mb-1">Verification Remarks (Optional)</label>
-                    <textarea id="verify_remarks" rows="2" placeholder="e.g. Verified via GCash portal statement..." class="w-full p-2.5 text-xs border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-brand-primary transition-all"></textarea>
                 </div>
 
                 <div class="p-3 bg-blue-50/70 border border-blue-100 rounded-md flex items-start space-x-2 text-[11px] text-blue-800">

@@ -343,7 +343,6 @@
                                 <span class="text-xs font-bold text-brand-dark">2026-00001 (Student)</span>
                                 <span class="text-[10px] text-gray-400">10 mins ago</span>
                             </div>
-                            <p class="text-[11px] text-gray-600">Reason: Forgot login password after term enrollment.</p>
                             <div class="pt-2 border-t border-gray-200 flex items-center justify-end space-x-2">
                                 <button class="btn-fulfill-reset text-xs px-2.5 py-1 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-md transition-colors" data-request-id="101" data-user-id="5" data-username="2026-00001">
                                     Generate Temp Password
@@ -357,7 +356,6 @@
                                 <span class="text-xs font-bold text-brand-dark">dept_cs (Department)</span>
                                 <span class="text-[10px] text-gray-400">1 hour ago</span>
                             </div>
-                            <p class="text-[11px] text-gray-600">Reason: Account locked out / password forgotten.</p>
                             <div class="pt-2 border-t border-gray-200 flex items-center justify-end space-x-2">
                                 <button class="btn-fulfill-reset text-xs px-2.5 py-1 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-md transition-colors" data-request-id="102" data-user-id="4" data-username="dept_cs">
                                     Generate Temp Password

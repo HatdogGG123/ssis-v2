@@ -243,8 +243,6 @@
     <!-- Interactive Scripts -->
     <script src="../../js/helperFunction.js"></script>
     <script>
-        showToast("success", "Test Toast");
-
         $(document).ready(function() {
             lucide.createIcons();
 

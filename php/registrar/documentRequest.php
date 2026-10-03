@@ -110,7 +110,6 @@
             <div class="space-y-1">
                 <div class="flex items-center space-x-2">
                     <h1 class="text-2xl font-bold text-brand-dark tracking-tight">Document Request Queue</h1>
-                    <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">Section 12 Compliant</span>
                 </div>
                 <p class="text-sm text-gray-500">Process transcripts, certifications, and diplomas through authorized statuses, manage rejections, and confirm pickups.</p>
             </div>
@@ -161,7 +160,7 @@
 
                 <!-- Document Requests Table -->
                 <div class="overflow-x-auto border border-gray-100 rounded-lg bg-white">
-                    <table id="table_document_requests" class="w-full min-w-[720px] text-left text-xs border-collapse">
+                    <table id="table_documentRequests" class="w-full min-w-[720px] text-left text-xs border-collapse">
                         <thead>
                             <tr class="bg-gray-50/80 border-b border-gray-100 text-gray-500 uppercase font-semibold">
                                 <th class="py-3 px-5 w-40 whitespace-nowrap">Ref # & Date</th>
@@ -171,9 +170,9 @@
                                 <th class="py-3 px-5 text-right w-56 whitespace-nowrap">Queue Actions</th>
                             </tr>
                         </thead>
-                        <tbody id="tbody_document_requests" class="divide-y divide-gray-100 text-gray-700 font-medium">
+                        <tbody id="tbody_documentRequests" class="divide-y divide-gray-100 text-gray-700 font-medium">
                             <!-- Row 1: Pending Review -->
-                            <tr class="hover:bg-gray-50/50" data-status="Pending" data-doc="TOR" data-mode="Pickup">
+                            <tr class="hover:bg-gray-50/50" data-status="Pending" data-doc="TOR">
                                 <td class="py-3.5 px-5 space-y-0.5 whitespace-nowrap">
                                     <p class="font-display font-bold text-brand-primary">REQ-2026-0891</p>
                                     <p class="text-gray-400 text-[11px]">Oct 02, 2026 • 09:30 AM</p>
@@ -202,7 +201,7 @@
                             </tr>
 
                             <!-- Row 2: Ready for Pickup -->
-                            <tr class="hover:bg-gray-50/50 bg-purple-50/10" data-status="Ready for Pickup" data-doc="GMC" data-mode="Pickup">
+                            <tr class="hover:bg-gray-50/50 bg-purple-50/10" data-status="Ready for Pickup" data-doc="GMC">
                                 <td class="py-3.5 px-5 space-y-0.5 whitespace-nowrap">
                                     <p class="font-display font-bold text-brand-primary">REQ-2026-0870</p>
                                     <p class="text-gray-400 text-[11px]">Sep 29, 2026 • 11:00 AM</p>
@@ -213,7 +212,7 @@
                                 </td>
                                 <td class="py-3.5 px-5 space-y-0.5 min-w-[200px]">
                                     <p class="font-semibold text-brand-dark">Good Moral Certificate</p>
-                                    <p class="text-gray-400 text-[11px]">Qty: 1 Copy • Campus Pickup</p>
+                                    <p class="text-gray-400 text-[11px]">Qty: 1 Copy</p>
                                 </td>
                                 <td class="py-3.5 px-5 text-center whitespace-nowrap">
                                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-purple-100 text-purple-800">Ready for Pickup</span>
