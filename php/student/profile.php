@@ -60,28 +60,22 @@
                 </div>
 
                 <!-- Desktop Navigation Links -->
-                <nav class="hidden md:flex items-center space-x-1">
+                <nav class="hidden lg:flex items-center space-x-1">
                     <a href="dashboard.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Dashboard</a>
                     <a href="enrollment.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Enrollment</a>
                     <a href="grades.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Grades</a>
                     <a href="clearance.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Clearance</a>
                     <a href="requests.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Requests</a>
                     <a href="profile.php" class="px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30 border border-brand-secondary/20">Profile</a>
+                    <a href="notifications.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Notifications</a>
                 </nav>
 
                 <!-- Action Controls -->
                 <div class="flex items-center space-x-3">
-
-                    <!-- Notification Bell -->
-                    <a href="notifications.php" id="nav_notification_link" class="relative p-2 text-gray-500 hover:text-brand-primary rounded-md hover:bg-gray-100 transition-colors" title="Notifications">
-                        <i data-lucide="bell" class="w-5 h-5"></i>
-                        <span id="nav_unread_count" class="absolute top-1 right-1 inline-flex items-center justify-center px-1.5 py-0.5 text-[10px] font-bold leading-none text-white bg-red-600 rounded-full">3</span>
-                    </a>
-
                     <div class="h-5 w-px bg-gray-200 hidden md:block"></div>
 
                     <!-- User Info / Profile -->
-                    <div class="hidden md:flex items-center space-x-2">
+                    <div class="hidden lg:flex items-center space-x-2">
                         <div class="text-right">
                             <p id="nav_student_name" class="text-xs font-semibold text-brand-dark">John Doe</p>
                             <p id="nav_student_id" class="text-[10px] text-gray-500">2026-00001</p>
@@ -92,21 +86,26 @@
                     </div>
 
                     <!-- Mobile Menu Button -->
-                    <button id="mobile_menu_btn" type="button" class="md:hidden p-2 rounded-md text-gray-600 hover:text-brand-primary hover:bg-gray-100 focus:outline-none">
-                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    <button id="mobile_menu_btn" type="button" class="lg:hidden p-2 rounded-md text-gray-600 hover:text-brand-primary hover:bg-gray-100 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu preview-icon size-5">
+                            <path d="M4 5h16" />
+                            <path d="M4 12h16" />
+                            <path d="M4 19h16" />
+                        </svg>
                     </button>
                 </div>
             </div>
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile_menu" class="hidden md:hidden border-t border-gray-200 bg-white px-4 pt-2 pb-4 space-y-1">
+        <div id="mobile_menu" class="hidden lg:hidden border-t border-gray-200 bg-white px-4 pt-2 pb-4 space-y-1">
             <a href="dashboard.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Dashboard</a>
             <a href="enrollment.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Enrollment</a>
             <a href="grades.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Grades</a>
             <a href="clearance.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Clearance</a>
             <a href="requests.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Requests</a>
             <a href="profile.php" class="block px-3 py-2 rounded-md text-base font-semibold text-brand-primary bg-brand-accent/30">Profile</a>
+            <a href="notifications.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Notifications</a>
             <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
                 <div>
                     <p class="text-sm font-semibold text-brand-dark">John Doe</p>
@@ -160,7 +159,7 @@
         </section>
 
         <!-- Information Forms Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-full gap-8">
 
             <!-- Personal Contact Details -->
             <section class="bg-white border border-gray-200 rounded-md p-6 shadow-xs space-y-4">
@@ -173,9 +172,8 @@
 
                 <form id="form_update_personal" method="POST" action="profile.php" class="space-y-4 text-xs">
                     <div>
-                        <label for="input_email" class="block font-semibold text-gray-700 mb-1">Institutional Email</label>
-                        <input type="email" id="input_email" name="email" value="john.doe@paxton.edu.ph" readonly class="w-full px-3 py-2 border border-gray-200 rounded-md bg-gray-50 text-gray-500 cursor-not-allowed outline-none">
-                        <p class="text-[10px] text-gray-400 mt-1">Official email issued by university system.</p>
+                        <label for="input_email" class="block font-semibold text-gray-700 mb-1">Email</label>
+                        <input type="email" id="input_email" name="email" value="john.doe@paxton.edu.ph" required class="w-full px-3 py-2 border border-gray-300 rounded-md text-brand-dark bg-white focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none">
                     </div>
 
                     <div>
@@ -192,40 +190,6 @@
                         <button type="submit" id="btn_save_personal" class="inline-flex items-center space-x-1.5 px-3 py-2 bg-brand-primary text-white font-semibold rounded-md hover:bg-brand-primary/90 transition-colors shadow-xs">
                             <i data-lucide="save" class="w-4 h-4"></i>
                             <span>Save Contact Info</span>
-                        </button>
-                    </div>
-                </form>
-            </section>
-
-            <!-- Emergency Contact Information -->
-            <section class="bg-white border border-gray-200 rounded-md p-6 shadow-xs space-y-4">
-                <div class="flex items-center justify-between pb-3 border-b border-gray-100">
-                    <div class="flex items-center space-x-2">
-                        <i data-lucide="phone-call" class="w-5 h-5 text-brand-primary"></i>
-                        <h3 class="text-base font-bold text-brand-dark">Emergency Contact</h3>
-                    </div>
-                </div>
-
-                <form id="form_update_emergency" method="POST" action="profile.php" class="space-y-4 text-xs">
-                    <div>
-                        <label for="input_guardian_name" class="block font-semibold text-gray-700 mb-1">Guardian / Parent Name *</label>
-                        <input type="text" id="input_guardian_name" name="guardian_name" value="Jane Doe" required class="w-full px-3 py-2 border border-gray-300 rounded-md text-brand-dark bg-white focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none">
-                    </div>
-
-                    <div>
-                        <label for="input_relationship" class="block font-semibold text-gray-700 mb-1">Relationship *</label>
-                        <input type="text" id="input_relationship" name="relationship" value="Parent" required class="w-full px-3 py-2 border border-gray-300 rounded-md text-brand-dark bg-white focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none">
-                    </div>
-
-                    <div>
-                        <label for="input_guardian_phone" class="block font-semibold text-gray-700 mb-1">Emergency Contact Number *</label>
-                        <input type="text" id="input_guardian_phone" name="guardian_phone" value="+63 918 987 6543" required class="w-full px-3 py-2 border border-gray-300 rounded-md text-brand-dark bg-white focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none">
-                    </div>
-
-                    <div class="flex justify-end pt-2">
-                        <button type="submit" id="btn_save_emergency" class="inline-flex items-center space-x-1.5 px-3 py-2 bg-brand-primary text-white font-semibold rounded-md hover:bg-brand-primary/90 transition-colors shadow-xs">
-                            <i data-lucide="save" class="w-4 h-4"></i>
-                            <span>Save Guardian Info</span>
                         </button>
                     </div>
                 </form>
@@ -277,7 +241,10 @@
     </footer>
 
     <!-- Interactive Scripts -->
+    <script src="../../js/helperFunction.js"></script>
     <script>
+        showToast("success", "Test Toast");
+
         $(document).ready(function() {
             lucide.createIcons();
 

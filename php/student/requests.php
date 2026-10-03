@@ -60,28 +60,22 @@
                 </div>
 
                 <!-- Desktop Navigation Links -->
-                <nav class="hidden md:flex items-center space-x-1">
+                <nav class="hidden lg:flex items-center space-x-1">
                     <a href="dashboard.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Dashboard</a>
                     <a href="enrollment.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Enrollment</a>
                     <a href="grades.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Grades</a>
                     <a href="clearance.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Clearance</a>
                     <a href="requests.php" class="px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30 border border-brand-secondary/20">Requests</a>
                     <a href="profile.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Profile</a>
+                    <a href="notifications.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Notifications</a>
                 </nav>
 
                 <!-- Action Controls -->
                 <div class="flex items-center space-x-3">
-
-                    <!-- Notification Bell -->
-                    <a href="notifications.php" id="nav_notification_link" class="relative p-2 text-gray-500 hover:text-brand-primary rounded-md hover:bg-gray-100 transition-colors" title="Notifications">
-                        <i data-lucide="bell" class="w-5 h-5"></i>
-                        <span id="nav_unread_count" class="absolute top-1 right-1 inline-flex items-center justify-center px-1.5 py-0.5 text-[10px] font-bold leading-none text-white bg-red-600 rounded-full">3</span>
-                    </a>
-
                     <div class="h-5 w-px bg-gray-200 hidden md:block"></div>
 
                     <!-- User Info / Profile -->
-                    <div class="hidden md:flex items-center space-x-2">
+                    <div class="hidden lg:flex items-center space-x-2">
                         <div class="text-right">
                             <p id="nav_student_name" class="text-xs font-semibold text-brand-dark">John Doe</p>
                             <p id="nav_student_id" class="text-[10px] text-gray-500">2026-00001</p>
@@ -92,21 +86,26 @@
                     </div>
 
                     <!-- Mobile Menu Button -->
-                    <button id="mobile_menu_btn" type="button" class="md:hidden p-2 rounded-md text-gray-600 hover:text-brand-primary hover:bg-gray-100 focus:outline-none">
-                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    <button id="mobile_menu_btn" type="button" class="lg:hidden p-2 rounded-md text-gray-600 hover:text-brand-primary hover:bg-gray-100 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu preview-icon size-5">
+                            <path d="M4 5h16" />
+                            <path d="M4 12h16" />
+                            <path d="M4 19h16" />
+                        </svg>
                     </button>
                 </div>
             </div>
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile_menu" class="hidden md:hidden border-t border-gray-200 bg-white px-4 pt-2 pb-4 space-y-1">
+        <div id="mobile_menu" class="hidden lg:hidden border-t border-gray-200 bg-white px-4 pt-2 pb-4 space-y-1">
             <a href="dashboard.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Dashboard</a>
             <a href="enrollment.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Enrollment</a>
             <a href="grades.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Grades</a>
             <a href="clearance.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Clearance</a>
             <a href="requests.php" class="block px-3 py-2 rounded-md text-base font-semibold text-brand-primary bg-brand-accent/30">Requests</a>
             <a href="profile.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Profile</a>
+            <a href="notifications.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Notifications</a>
             <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
                 <div>
                     <p class="text-sm font-semibold text-brand-dark">John Doe</p>
@@ -142,12 +141,13 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
                         <label for="select_document_type" class="block text-xs font-semibold text-gray-700 mb-1">Document Type *</label>
+                        <!-- Added data-fee attributes to each option for easy dynamic calculation -->
                         <select id="select_document_type" name="document_type_id" required class="w-full px-3 py-2 border border-gray-300 rounded-md text-xs text-brand-dark bg-white focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none">
                             <option value="" disabled selected>Select document...</option>
-                            <option value="1">Official Transcript of Record (TOR)</option>
-                            <option value="2">Certificate of Enrollment (COE)</option>
-                            <option value="3">Certificate of Good Moral Character</option>
-                            <option value="4">Honorable Dismissal / Transfer Credentials</option>
+                            <option value="1" data-fee="150">Official Transcript of Record (TOR) - ₱150.00</option>
+                            <option value="2" data-fee="50">Certificate of Enrollment (COE) - ₱50.00</option>
+                            <option value="3" data-fee="75">Certificate of Good Moral Character - ₱75.00</option>
+                            <option value="4" data-fee="200">Honorable Dismissal / Transfer Credentials - ₱200.00</option>
                         </select>
                     </div>
 
@@ -173,7 +173,12 @@
                     <textarea id="textarea_remarks" name="remarks" rows="2" placeholder="Optional notes for registrar office..." class="w-full px-3 py-2 border border-gray-300 rounded-md text-xs text-brand-dark bg-white focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none"></textarea>
                 </div>
 
-                <div class="flex justify-end pt-2">
+                <!-- Fee Display Paragraph -->
+                <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+                    <p id="fee_display" class="text-xs font-medium text-gray-600">
+                        Estimated Fee: <span id="fee_amount" class="text-sm font-bold text-brand-dark">₱0.00</span>
+                    </p>
+
                     <button type="submit" id="btn_submit_request" class="inline-flex items-center space-x-2 px-4 py-2 bg-brand-primary text-white text-xs font-semibold rounded-md hover:bg-brand-primary/90 transition-colors shadow-xs">
                         <i data-lucide="send" class="w-4 h-4"></i>
                         <span>Submit Request</span>
@@ -196,7 +201,7 @@
                 </div>
             </div>
 
-            <!-- Table with All Possible Backend States -->
+            <!-- Table with All Document Request Statuses (Plain Text) -->
             <div class="overflow-x-auto">
                 <table id="table_requests_history" class="w-full text-left text-xs border-collapse">
                     <thead>
@@ -204,99 +209,102 @@
                             <th class="py-3 px-5">Request Ref</th>
                             <th class="py-3 px-5">Document Title</th>
                             <th class="py-3 px-5">Date Filed</th>
-                            <th class="py-3 px-5 text-center">Payment</th>
-                            <th class="py-3 px-5 text-center">Status</th>
-                            <th class="py-3 px-5 text-right">Actions / Remarks</th>
+                            <th class="py-3 px-5 text-center">Payment Status</th>
+                            <th class="py-3 px-5 text-center">Request Status</th>
+                            <th class="py-3 px-5 text-right">Remarks</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-100 text-gray-700 font-medium">
 
-                        <!-- STATE 1: APPROVED / COMPLETED -->
+                        <!-- 1. PENDING -->
                         <tr class="hover:bg-gray-50/50 transition-colors">
-                            <td class="py-3.5 px-5 font-bold text-brand-dark">REQ-2026-001</td>
-                            <td class="py-3.5 px-5">Certificate of Enrollment (COE)</td>
-                            <td class="py-3.5 px-5 text-gray-500">Oct 01, 2026</td>
-                            <td class="py-3.5 px-5 text-center">
-                                <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-100 text-emerald-800">Paid</span>
-                            </td>
-                            <td class="py-3.5 px-5 text-center">
-                                <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-100 text-emerald-800">Approved</span>
-                            </td>
-                            <td class="py-3.5 px-5 text-right">
-                                <a href="download_doc.php?id=REQ-2026-001" class="inline-flex items-center space-x-1 px-2.5 py-1 bg-brand-primary text-white rounded text-[11px] font-semibold hover:bg-brand-primary/90 transition-colors">
-                                    <i data-lucide="download" class="w-3.5 h-3.5"></i>
-                                    <span>Download PDF</span>
-                                </a>
-                            </td>
-                        </tr>
-
-                        <!-- STATE 2: PENDING PAYMENT -->
-                        <tr class="hover:bg-gray-50/50 transition-colors">
-                            <td class="py-3.5 px-5 font-bold text-brand-dark">REQ-2026-002</td>
+                            <td class="py-3.5 px-5 font-bold text-brand-dark">DR-2026-0001</td>
                             <td class="py-3.5 px-5">Official Transcript of Record (TOR)</td>
+                            <td class="py-3.5 px-5 text-gray-500">Oct 03, 2026</td>
+                            <td class="py-3.5 px-5 text-center text-gray-700">Unpaid</td>
+                            <td class="py-3.5 px-5 text-center text-gray-700">Pending</td>
+                            <td class="py-3.5 px-5 text-right text-gray-500">Awaiting registrar initial review</td>
+                        </tr>
+
+                        <!-- 2. UNDER REVIEW -->
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="py-3.5 px-5 font-bold text-brand-dark">DR-2026-0002</td>
+                            <td class="py-3.5 px-5">Certificate of Enrollment (COE)</td>
                             <td class="py-3.5 px-5 text-gray-500">Oct 02, 2026</td>
-                            <td class="py-3.5 px-5 text-center">
-                                <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-amber-100 text-amber-800">Unpaid</span>
-                            </td>
-                            <td class="py-3.5 px-5 text-center">
-                                <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-amber-100 text-amber-800">Pending</span>
-                            </td>
-                            <td class="py-3.5 px-5 text-right">
-                                <a href="pay_request.php?id=REQ-2026-002" class="inline-flex items-center space-x-1 px-2.5 py-1 bg-amber-600 text-white rounded text-[11px] font-semibold hover:bg-amber-700 transition-colors">
-                                    <i data-lucide="credit-card" class="w-3.5 h-3.5"></i>
-                                    <span>Pay Fee</span>
-                                </a>
-                            </td>
+                            <td class="py-3.5 px-5 text-center text-gray-700">Unpaid</td>
+                            <td class="py-3.5 px-5 text-center text-gray-700">Under Review</td>
+                            <td class="py-3.5 px-5 text-right text-gray-500">Verifying academic records</td>
                         </tr>
 
-                        <!-- STATE 3: PROCESSING / IN REVIEW -->
+                        <!-- 3. FOR PAYMENT -->
                         <tr class="hover:bg-gray-50/50 transition-colors">
-                            <td class="py-3.5 px-5 font-bold text-brand-dark">REQ-2026-003</td>
-                            <td class="py-3.5 px-5">Certificate of Good Moral Character</td>
+                            <td class="py-3.5 px-5 font-bold text-brand-dark">DR-2026-0003</td>
+                            <td class="py-3.5 px-5">Honorable Dismissal / Transfer Credentials</td>
+                            <td class="py-3.5 px-5 text-gray-500">Oct 01, 2026</td>
+                            <td class="py-3.5 px-5 text-center text-gray-700">Unpaid</td>
+                            <td class="py-3.5 px-5 text-center text-gray-700">For Payment</td>
+                            <td class="py-3.5 px-5 text-right text-gray-500">Please pay ₱200.00 at Cashier</td>
+                        </tr>
+
+                        <!-- 4. PAID -->
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="py-3.5 px-5 font-bold text-brand-dark">DR-2026-0004</td>
+                            <td class="py-3.5 px-5">Official Transcript of Record (TOR)</td>
                             <td class="py-3.5 px-5 text-gray-500">Sep 28, 2026</td>
-                            <td class="py-3.5 px-5 text-center">
-                                <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-100 text-emerald-800">Paid</span>
-                            </td>
-                            <td class="py-3.5 px-5 text-center">
-                                <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-blue-100 text-blue-800">Processing</span>
-                            </td>
-                            <td class="py-3.5 px-5 text-right text-gray-500 italic">
-                                Under review by OSA
-                            </td>
+                            <td class="py-3.5 px-5 text-center text-gray-700">Paid</td>
+                            <td class="py-3.5 px-5 text-center text-gray-700">Paid</td>
+                            <td class="py-3.5 px-5 text-right text-gray-500">Payment verified (OR-2026-0102)</td>
                         </tr>
 
-                        <!-- STATE 4: READY FOR PHYSICAL PICKUP -->
+                        <!-- 5. PROCESSING -->
                         <tr class="hover:bg-gray-50/50 transition-colors">
-                            <td class="py-3.5 px-5 font-bold text-brand-dark">REQ-2026-004</td>
-                            <td class="py-3.5 px-5">Honorable Dismissal & Credentials</td>
+                            <td class="py-3.5 px-5 font-bold text-brand-dark">DR-2026-0005</td>
+                            <td class="py-3.5 px-5">Certificate of Good Moral Character</td>
+                            <td class="py-3.5 px-5 text-gray-500">Sep 25, 2026</td>
+                            <td class="py-3.5 px-5 text-center text-gray-700">Paid</td>
+                            <td class="py-3.5 px-5 text-center text-gray-700">Processing</td>
+                            <td class="py-3.5 px-5 text-right text-gray-500">Printing and signing document</td>
+                        </tr>
+
+                        <!-- 6. READY FOR RELEASE -->
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="py-3.5 px-5 font-bold text-brand-dark">DR-2026-0006</td>
+                            <td class="py-3.5 px-5">Certificate of Enrollment (COE)</td>
                             <td class="py-3.5 px-5 text-gray-500">Sep 20, 2026</td>
-                            <td class="py-3.5 px-5 text-center">
-                                <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-100 text-emerald-800">Paid</span>
-                            </td>
-                            <td class="py-3.5 px-5 text-center">
-                                <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-purple-100 text-purple-800">Ready for Pickup</span>
-                            </td>
-                            <td class="py-3.5 px-5 text-right text-brand-dark font-semibold">
-                                Counter 2 (Registrar)
-                            </td>
+                            <td class="py-3.5 px-5 text-center text-gray-700">Paid</td>
+                            <td class="py-3.5 px-5 text-center text-gray-700">Ready for Release</td>
+                            <td class="py-3.5 px-5 text-right text-gray-500">Available for pickup at Registrar Window 2</td>
                         </tr>
 
-                        <!-- STATE 5: REJECTED / DISAPPROVED -->
-                        <tr class="hover:bg-gray-50/50 transition-colors bg-red-50/30">
-                            <td class="py-3.5 px-5 font-bold text-brand-dark">REQ-2026-005</td>
-                            <td class="py-3.5 px-5">Form 137 / Official Transcript</td>
+                        <!-- 7. COMPLETED -->
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="py-3.5 px-5 font-bold text-brand-dark">DR-2026-0007</td>
+                            <td class="py-3.5 px-5">Certificate of Good Moral Character</td>
                             <td class="py-3.5 px-5 text-gray-500">Sep 15, 2026</td>
-                            <td class="py-3.5 px-5 text-center">
-                                <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-gray-100 text-gray-600">Refunded</span>
-                            </td>
-                            <td class="py-3.5 px-5 text-center">
-                                <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-red-100 text-red-800">Rejected</span>
-                            </td>
-                            <td class="py-3.5 px-5 text-right text-red-600 font-medium">
-                                Unresolved Library clearance
-                            </td>
+                            <td class="py-3.5 px-5 text-center text-gray-700">Paid</td>
+                            <td class="py-3.5 px-5 text-center text-gray-700">Completed</td>
+                            <td class="py-3.5 px-5 text-right text-gray-500">Claimed on Sep 18, 2026</td>
                         </tr>
 
+                        <!-- 8. REJECTED -->
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="py-3.5 px-5 font-bold text-brand-dark">DR-2026-0008</td>
+                            <td class="py-3.5 px-5">Honorable Dismissal / Transfer Credentials</td>
+                            <td class="py-3.5 px-5 text-gray-500">Sep 10, 2026</td>
+                            <td class="py-3.5 px-5 text-center text-gray-700">Refunded</td>
+                            <td class="py-3.5 px-5 text-center text-gray-700">Rejected</td>
+                            <td class="py-3.5 px-5 text-right text-gray-500">Unresolved library clearance deficiency</td>
+                        </tr>
+
+                        <!-- 9. CANCELLED -->
+                        <tr class="hover:bg-gray-50/50 transition-colors">
+                            <td class="py-3.5 px-5 font-bold text-brand-dark">DR-2026-0009</td>
+                            <td class="py-3.5 px-5">Official Transcript of Record (TOR)</td>
+                            <td class="py-3.5 px-5 text-gray-500">Sep 05, 2026</td>
+                            <td class="py-3.5 px-5 text-center text-gray-700">Unpaid</td>
+                            <td class="py-3.5 px-5 text-center text-gray-700">Cancelled</td>
+                            <td class="py-3.5 px-5 text-right text-gray-500">Cancelled by student prior to payment</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

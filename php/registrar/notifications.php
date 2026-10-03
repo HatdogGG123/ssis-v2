@@ -93,20 +93,7 @@
     </header>
 
     <main class="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
-        <!-- Filter & Search Toolbar -->
-        <div class="bg-white border border-gray-200 rounded-md p-4 shadow-xs flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="flex flex-wrap items-center gap-2 w-full md:w-auto">
-                <button type="button" class="btn-filter px-3 py-1.5 rounded-md text-xs font-semibold bg-brand-primary text-white shadow-xs" data-filter="all">
-                    All
-                </button>
-                <button type="button" class="btn-filter px-3 py-1.5 rounded-md text-xs font-medium text-gray-600 hover:bg-gray-100 transition-colors" data-filter="unread">
-                    Unread
-                </button>
-                <button type="button" class="btn-filter px-3 py-1.5 rounded-md text-xs font-medium text-gray-600 hover:bg-gray-100 transition-colors" data-filter="unread">
-                    Read
-                </button>
-            </div>
-        </div>
+
 
         <!-- Notifications List Feed -->
         <section class="space-y-3" id="container_notifications_list">
