@@ -41,16 +41,13 @@
 
 <body class="bg-gray-50 font-sans text-brand-dark antialiased min-h-screen flex flex-col">
 
-    <!-- Top Navigation Bar -->
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-30 print:hidden">
+    <!-- Navigation Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-
-                <!-- Brand Identity -->
+                <!-- Brand Logo -->
                 <div class="flex items-center space-x-3">
-                    <div class="w-9 h-9 bg-brand-primary rounded-md flex items-center justify-center text-white font-bold text-lg shadow-xs">
-                        P
-                    </div>
+                    <div class="w-9 h-9 bg-brand-primary rounded-md flex items-center justify-center text-white font-bold text-lg">P</div>
                     <div>
                         <span class="text-base font-bold text-brand-dark tracking-tight block leading-none">PAXTON</span>
                         <span class="text-[10px] uppercase font-semibold text-gray-500 tracking-widest block mt-0.5">University SSIS</span>
@@ -58,49 +55,42 @@
                 </div>
 
                 <!-- Desktop Navigation Links -->
-                <nav class="hidden lg:flex items-center space-x-1">
-                    <a href="dashboard.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Dashboard</a>
-                    <a href="enrollment.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Enrollment & Grades</a>
-                    <a href="registrar_reports.php" class="px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30 border border-brand-secondary/20">Reports</a>
-                    <a href="notifications.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Notifications</a>
+                <nav class="hidden lg:flex items-center space-x-1 text-xs">
+                    <a href="enrollment.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Enrollment</a>
+                    <a href="grades.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Grades</a>
+                    <a href="documentRequest.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Document Requests</a>
+                    <a href="clearance.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Clearance</a>
+                    <a href="report.php" class="block px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30">Report</a>
+                    <a href="notifications.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Notifications</a>
+                    <a href="announcements.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Announcements</a>
                 </nav>
 
-                <!-- Action Controls -->
+                <!-- Profile Info & Mobile Toggle -->
                 <div class="flex items-center space-x-3">
-                    <div class="h-5 w-px bg-gray-200 hidden md:block"></div>
-
-                    <!-- User Info / Profile -->
                     <div class="hidden lg:flex items-center space-x-2">
                         <div class="text-right">
-                            <p class="text-xs font-semibold text-brand-dark">Elena Rostova</p>
-                            <p class="text-[10px] text-gray-500">University Registrar</p>
+                            <p class="text-xs font-semibold text-brand-dark">Registrar Staff</p>
+                            <p class="text-[10px] text-gray-500 uppercase font-bold">Registrar Module</p>
                         </div>
-                        <a href="logout.php" class="p-2 text-gray-400 hover:text-red-600 rounded-md hover:bg-gray-100 transition-colors" title="Log Out">
-                            <i data-lucide="log-out" class="w-5 h-5"></i>
-                        </a>
                     </div>
 
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile_menu_btn" type="button" class="lg:hidden p-2 rounded-md text-gray-600 hover:text-brand-primary hover:bg-gray-100 focus:outline-none">
-                        <i data-lucide="menu" class="w-5 h-5"></i>
+                    <button type="button" id="btn_mobile_menu" class="lg:hidden p-2 rounded-md text-gray-500 hover:text-brand-dark hover:bg-gray-100 focus:outline-none">
+                        <i data-lucide="menu" id="icon_menu_open" class="w-6 h-6"></i>
+                        <i data-lucide="x" id="icon_menu_close" class="w-6 h-6 hidden"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile_menu" class="hidden lg:hidden border-t border-gray-200 bg-white px-4 pt-2 pb-4 space-y-1">
-            <a href="dashboard.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Dashboard</a>
-            <a href="enrollment.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Enrollment & Grades</a>
-            <a href="registrar_reports.php" class="block px-3 py-2 rounded-md text-base font-semibold text-brand-primary bg-brand-accent/30">Reports</a>
-            <a href="notifications.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Notifications</a>
-            <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
-                <div>
-                    <p class="text-sm font-semibold text-brand-dark">Elena Rostova</p>
-                    <p class="text-xs text-gray-500">University Registrar</p>
-                </div>
-                <a href="logout.php" class="text-xs text-red-600 font-semibold hover:underline">Log Out</a>
-            </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile_nav_menu" class="hidden lg:hidden border-t border-gray-200 bg-white px-4 pt-2 pb-4 space-y-1 text-xs shadow-md">
+            <a href="enrollment.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Enrollment</a>
+            <a href="grades.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Grades</a>
+            <a href="documentRequest.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Document Requests</a>
+            <a href="clearance.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Clearance</a>
+            <a href="report.php" class="block px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30">Report</a>
+            <a href="notifications.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Notifications</a>
+            <a href="announcements.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Announcements</a>
         </div>
     </header>
 
@@ -239,8 +229,8 @@
     <script>
         $(document).ready(function() {
             lucide.createIcons();
-            $('#mobile_menu_btn').on('click', function() {
-                $('#mobile_menu').toggleClass('hidden');
+            $('#btn_mobile_menu').on('click', function() {
+                $('#mobile_nav_menu').toggleClass('hidden');
             });
         });
 
