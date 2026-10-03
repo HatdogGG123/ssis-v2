@@ -54,6 +54,7 @@
                     <a href="documentRequest.php" class="block px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30">Document Requests</a>
                     <a href="clearance.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Clearance</a>
                     <a href="notifications.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Notifications</a>
+                    <a href="announcements.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Announcements</a>
                 </nav>
 
                 <!-- Profile Info & Mobile Toggle -->
@@ -81,6 +82,7 @@
             <a href="documentRequest.php" class="block px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30">Document Requests</a>
             <a href="clearance.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Clearance</a>
             <a href="notifications.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Notifications</a>
+            <a href="announcements.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Announcements</a>
 
             <div class="pt-3 border-t border-gray-100 flex items-center justify-between px-3">
                 <div>
@@ -127,115 +129,107 @@
         </section>
 
         <section class="bg-white border border-gray-200 rounded-md shadow-xs overflow-hidden">
-            <div class="p-5 border-b border-gray-100 space-y-4">
-                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                    <div>
-                        <h2 class="text-base font-bold text-brand-dark">Request Fulfillment Queue</h2>
-                        <p class="text-xs text-gray-500">Filter, update statuses sequentially, reject with reasons, or complete upon student pickup</p>
-                    </div>
-                    <div class="relative min-w-[280px]">
-                        <i data-lucide="search" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                        <input type="text" id="input_search_doc" placeholder="Search Request Ref #, Student Name..." class="w-full pl-9 pr-3 py-2 text-xs border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-brand-secondary">
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                    <div>
-                        <label for="filter_status" class="block text-[10px] font-bold uppercase tracking-wider text-gray-500 mb-1">Allowed Status (Section 12)</label>
-                        <select id="filter_status" onchange="filterQueueTable()" class="w-full px-3 py-2 text-xs border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-brand-secondary bg-white">
+            <div class="space-y-4">
+                <!-- Filter Bar (Required by rule: "queue with filters") -->
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-3 rounded-lg border border-gray-100 shadow-sm">
+                    <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
+                        <!-- Filter by Status (Section 12) -->
+                        <select id="filter_status" class="text-xs bg-gray-50 border border-gray-200 text-gray-700 rounded-md px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-brand-primary/20">
                             <option value="">All Statuses</option>
                             <option value="Pending">Pending Review</option>
-                            <option value="Processing">Processing / Printing</option>
+                            <option value="In Progress">In Progress</option>
                             <option value="Ready for Pickup">Ready for Pickup</option>
-                            <option value="Completed">Completed (Picked Up)</option>
+                            <option value="Completed">Completed</option>
                             <option value="Rejected">Rejected</option>
                         </select>
-                    </div>
-                    <div>
-                        <label for="filter_doc_type" class="block text-[10px] font-bold uppercase tracking-wider text-gray-500 mb-1">Document Type</label>
-                        <select id="filter_doc_type" onchange="filterQueueTable()" class="w-full px-3 py-2 text-xs border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-brand-secondary bg-white">
-                            <option value="">All Document Types</option>
-                            <option value="TOR">Official Transcript of Records (TOR)</option>
-                            <option value="COG">Certificate of Grades (COG)</option>
+
+                        <!-- Filter by Document -->
+                        <select id="filter_doc" class="text-xs bg-gray-50 border border-gray-200 text-gray-700 rounded-md px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-brand-primary/20">
+                            <option value="">All Documents</option>
+                            <option value="TOR">Transcript of Records (TOR)</option>
                             <option value="GMC">Good Moral Certificate</option>
-                            <option value="COE">Certificate of Enrollment</option>
                         </select>
                     </div>
-                    <div>
-                        <label for="filter_fulfillment" class="block text-[10px] font-bold uppercase tracking-wider text-gray-500 mb-1">Fulfillment Mode</label>
-                        <select id="filter_fulfillment" onchange="filterQueueTable()" class="w-full px-3 py-2 text-xs border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-brand-secondary bg-white">
-                            <option value="">All Modes</option>
-                            <option value="Pickup">On-Campus Pickup</option>
-                            <option value="Digital">Digital / PDF Copy</option>
-                        </select>
+
+                    <!-- Search Input -->
+                    <div class="w-full sm:w-64">
+                        <input type="text" id="search_queue" placeholder="Search Ref # or Student..." class="w-full text-xs bg-gray-50 border border-gray-200 text-gray-700 rounded-md px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-brand-primary/20" />
                     </div>
                 </div>
-            </div>
 
-            <div class="overflow-x-auto">
-                <table id="table_document_requests" class="w-full text-left text-xs border-collapse">
-                    <thead>
-                        <tr class="bg-gray-50/80 border-b border-gray-100 text-gray-500 uppercase font-semibold">
-                            <th class="py-3 px-5">Ref # & Date</th>
-                            <th class="py-3 px-5">Student Information</th>
-                            <th class="py-3 px-5">Requested Document</th>
-                            <th class="py-3 px-5 text-center">Status (Section 12)</th>
-                            <th class="py-3 px-5 text-right">Queue Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody_document_requests" class="divide-y divide-gray-100 text-gray-700 font-medium">
-                        <tr class="hover:bg-gray-50/50" data-status="Pending" data-doc="TOR" data-mode="Pickup">
-                            <td class="py-3.5 px-5 space-y-0.5">
-                                <p class="font-mono font-bold text-brand-primary">REQ-2026-0891</p>
-                                <p class="text-gray-400 text-[11px]">Oct 02, 2026 • 09:30 AM</p>
-                            </td>
-                            <td class="py-3.5 px-5 space-y-0.5">
-                                <p class="font-bold text-brand-dark">John Doe</p>
-                                <p class="text-gray-400 text-[11px] font-mono">2026-00001 (BSCS)</p>
-                            </td>
-                            <td class="py-3.5 px-5 space-y-0.5">
-                                <p class="font-semibold text-brand-dark">Official Transcript of Records (TOR)</p>
-                                <p class="text-gray-400 text-[11px]">Qty: 2 Copies • Pickup</p>
-                            </td>
-                            <td class="py-3.5 px-5 text-center">
-                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-amber-100 text-amber-800">Pending Review</span>
-                            </td>
-                            <td class="py-3.5 px-5 text-right space-x-1">
-                                <button type="button" onclick="openWorkflowModal('REQ-2026-0891', 'John Doe', 'Official Transcript of Records (TOR)', 'Pending')" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-md text-xs font-semibold bg-brand-primary text-white hover:bg-brand-primary/90">
-                                    <i data-lucide="play" class="w-3.5 h-3.5"></i>
-                                    <span>Process Status</span>
-                                </button>
-                                <button type="button" onclick="openRejectModal('REQ-2026-0891', 'John Doe')" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-md text-xs font-semibold border border-red-200 text-red-600 bg-white hover:bg-red-50">
-                                    <i data-lucide="x-circle" class="w-3.5 h-3.5"></i>
-                                    <span>Reject</span>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-gray-50/50 bg-purple-50/10" data-status="Ready for Pickup" data-doc="GMC" data-mode="Pickup">
-                            <td class="py-3.5 px-5 space-y-0.5">
-                                <p class="font-mono font-bold text-brand-primary">REQ-2026-0870</p>
-                                <p class="text-gray-400 text-[11px]">Sep 29, 2026 • 11:00 AM</p>
-                            </td>
-                            <td class="py-3.5 px-5 space-y-0.5">
-                                <p class="font-bold text-brand-dark">Alex Mercer</p>
-                                <p class="text-gray-400 text-[11px] font-mono">2026-00003 (BSIS)</p>
-                            </td>
-                            <td class="py-3.5 px-5 space-y-0.5">
-                                <p class="font-semibold text-brand-dark">Good Moral Certificate</p>
-                                <p class="text-gray-400 text-[11px]">Qty: 1 Copy • Campus Pickup</p>
-                            </td>
-                            <td class="py-3.5 px-5 text-center">
-                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-purple-100 text-purple-800">Ready for Pickup</span>
-                            </td>
-                            <td class="py-3.5 px-5 text-right space-x-1">
-                                <button type="button" onclick="openPickupCompletionModal('REQ-2026-0870', 'Alex Mercer', 'Good Moral Certificate')" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-md text-xs font-semibold bg-emerald-600 text-white hover:bg-emerald-700">
-                                    <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
-                                    <span>Mark Completed</span>
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <!-- Document Requests Table -->
+                <div class="overflow-x-auto border border-gray-100 rounded-lg bg-white">
+                    <table id="table_document_requests" class="w-full min-w-[720px] text-left text-xs border-collapse">
+                        <thead>
+                            <tr class="bg-gray-50/80 border-b border-gray-100 text-gray-500 uppercase font-semibold">
+                                <th class="py-3 px-5 w-40 whitespace-nowrap">Ref # & Date</th>
+                                <th class="py-3 px-5 w-48 whitespace-nowrap">Student Information</th>
+                                <th class="py-3 px-5 min-w-[200px]">Requested Document</th>
+                                <th class="py-3 px-5 text-center w-36 whitespace-nowrap">Status (Section 12)</th>
+                                <th class="py-3 px-5 text-right w-56 whitespace-nowrap">Queue Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody_document_requests" class="divide-y divide-gray-100 text-gray-700 font-medium">
+                            <!-- Row 1: Pending Review -->
+                            <tr class="hover:bg-gray-50/50" data-status="Pending" data-doc="TOR" data-mode="Pickup">
+                                <td class="py-3.5 px-5 space-y-0.5 whitespace-nowrap">
+                                    <p class="font-mono font-bold text-brand-primary">REQ-2026-0891</p>
+                                    <p class="text-gray-400 text-[11px]">Oct 02, 2026 • 09:30 AM</p>
+                                </td>
+                                <td class="py-3.5 px-5 space-y-0.5 whitespace-nowrap">
+                                    <p class="font-bold text-brand-dark">John Doe</p>
+                                    <p class="text-gray-400 text-[11px] font-mono">2026-00001 (BSCS)</p>
+                                </td>
+                                <td class="py-3.5 px-5 space-y-0.5 min-w-[200px]">
+                                    <p class="font-semibold text-brand-dark">Official Transcript of Records (TOR)</p>
+                                    <p class="text-gray-400 text-[11px]">Qty: 2 Copies • Pickup</p>
+                                </td>
+                                <td class="py-3.5 px-5 text-center whitespace-nowrap">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-amber-100 text-amber-800">Pending Review</span>
+                                </td>
+                                <td class="py-3.5 px-5 text-right space-x-1 whitespace-nowrap">
+                                    <button type="button" onclick="openWorkflowModal('REQ-2026-0891', 'John Doe', 'Official Transcript of Records (TOR)', 'Pending')" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-md text-xs font-semibold bg-brand-primary text-white hover:bg-brand-primary/90">
+                                        <i data-lucide="play" class="w-3.5 h-3.5"></i>
+                                        <span>Update Status</span>
+                                    </button>
+                                    <button type="button" onclick="openRejectModal('REQ-2026-0891', 'John Doe')" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-md text-xs font-semibold border border-red-200 text-red-600 bg-white hover:bg-red-50">
+                                        <i data-lucide="x-circle" class="w-3.5 h-3.5"></i>
+                                        <span>Reject</span>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <!-- Row 2: Ready for Pickup -->
+                            <tr class="hover:bg-gray-50/50 bg-purple-50/10" data-status="Ready for Pickup" data-doc="GMC" data-mode="Pickup">
+                                <td class="py-3.5 px-5 space-y-0.5 whitespace-nowrap">
+                                    <p class="font-mono font-bold text-brand-primary">REQ-2026-0870</p>
+                                    <p class="text-gray-400 text-[11px]">Sep 29, 2026 • 11:00 AM</p>
+                                </td>
+                                <td class="py-3.5 px-5 space-y-0.5 whitespace-nowrap">
+                                    <p class="font-bold text-brand-dark">Alex Mercer</p>
+                                    <p class="text-gray-400 text-[11px] font-mono">2026-00003 (BSIS)</p>
+                                </td>
+                                <td class="py-3.5 px-5 space-y-0.5 min-w-[200px]">
+                                    <p class="font-semibold text-brand-dark">Good Moral Certificate</p>
+                                    <p class="text-gray-400 text-[11px]">Qty: 1 Copy • Campus Pickup</p>
+                                </td>
+                                <td class="py-3.5 px-5 text-center whitespace-nowrap">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-purple-100 text-purple-800">Ready for Pickup</span>
+                                </td>
+                                <td class="py-3.5 px-5 text-right space-x-1 whitespace-nowrap">
+                                    <button type="button" onclick="openPickupCompletionModal('REQ-2026-0870', 'Alex Mercer', 'Good Moral Certificate')" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-md text-xs font-semibold bg-emerald-600 text-white hover:bg-emerald-700">
+                                        <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
+                                        <span>Mark Completed</span>
+                                    </button>
+                                    <button type="button" onclick="openRejectModal('REQ-2026-0870', 'Alex Mercer')" class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-md text-xs font-semibold border border-red-200 text-red-600 bg-white hover:bg-red-50">
+                                        <i data-lucide="x-circle" class="w-3.5 h-3.5"></i>
+                                        <span>Reject</span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
@@ -309,6 +303,7 @@
         <p>Paxton University Student Services Information System (SSIS) &copy; 2026. All Rights Reserved.</p>
     </footer>
 
+    <script src="../../js/helperFunction.js"></script>
     <script>
         let currentTargetRef = '';
         $(document).ready(function() {
@@ -336,7 +331,7 @@
 
         function confirmStatusUpdate() {
             closeModal('modal_status_workflow');
-            showAlert('success', `Request ${currentTargetRef} updated.`);
+            showToast('success', `Request ${currentTargetRef} updated.`);
         }
 
         function openRejectModal(refNum) {
@@ -346,7 +341,7 @@
 
         function confirmRejection() {
             closeModal('modal_reject_request');
-            showAlert('error', `Request ${currentTargetRef} rejected.`);
+            showToast('error', `Request ${currentTargetRef} rejected.`);
         }
 
         function openPickupCompletionModal(refNum, studentName) {
@@ -357,13 +352,10 @@
 
         function confirmPickupCompletion() {
             closeModal('modal_pickup_completion');
-            showAlert('success', `Request ${currentTargetRef} marked as Completed.`);
+            showToast('success', `Request ${currentTargetRef} marked as Completed.`);
         }
 
-        function showAlert(type, message) {
-            $('#alert_text').text(message);
-            $('#container_alert_message').removeClass('hidden').addClass(type === 'success' ? 'bg-emerald-50 border-emerald-200 text-emerald-800' : 'bg-red-50 border-red-200 text-red-800');
-        }
+
 
         function filterQueueTable() {
             /* filter logic */

@@ -54,6 +54,7 @@
                     <a href="documentRequest.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Document Requests</a>
                     <a href="clearance.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Clearance</a>
                     <a href="notifications.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Notifications</a>
+                    <a href="announcements.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Announcements</a>
                 </nav>
 
                 <!-- Profile Info & Mobile Toggle -->
@@ -81,6 +82,7 @@
             <a href="documentRequest.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Document Requests</a>
             <a href="clearance.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Clearance</a>
             <a href="notifications.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Notifications</a>
+            <a href="announcements.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Announcements</a>
 
             <div class="pt-3 border-t border-gray-100 flex items-center justify-between px-3">
                 <div>
@@ -141,47 +143,48 @@
                 </div>
             </div>
 
+            <!-- Table Wrapper with smooth horizontal scrolling & fixed minimum width -->
             <div class="overflow-x-auto">
-                <table class="w-full text-left text-xs border-collapse">
+                <table class="w-full text-left text-xs border-collapse min-w-[560px]">
                     <thead>
-                        <tr class="bg-gray-50/80 border-b border-gray-100 text-gray-500 uppercase font-semibold">
-                            <th class="py-3 px-5">Student ID & Name</th>
-                            <th class="py-3 px-5">Grade Input</th>
-                            <th class="py-3 px-5 text-center">Status</th>
-                            <th class="py-3 px-5 text-right">Actions</th>
+                        <tr class="bg-gray-50/80 border-b border-gray-100 text-gray-500 uppercase font-semibold whitespace-nowrap">
+                            <th class="py-3 px-3 sm:px-5 sticky left-0 bg-gray-50 z-10 shadow-[1px_0_0_0_#f3f4f6]">Student ID & Name</th>
+                            <th class="py-3 px-3 sm:px-5">Grade Input</th>
+                            <th class="py-3 px-3 sm:px-5 text-center">Status</th>
+                            <th class="py-3 px-3 sm:px-5 text-right">Actions</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-100 font-medium text-gray-700">
                         <!-- Student 1 -->
-                        <tr data-student="2026-00001">
-                            <td class="py-3.5 px-5">
+                        <tr data-student="2026-00001" class="hover:bg-gray-50/50 group">
+                            <td class="py-3.5 px-3 sm:px-5 whitespace-nowrap sticky left-0 bg-white group-hover:bg-gray-50/50 z-10 shadow-[1px_0_0_0_#f3f4f6]">
                                 <p class="font-bold text-brand-dark">John Doe</p>
                                 <p class="text-gray-400 text-[11px] font-mono">2026-00001</p>
                             </td>
-                            <td class="py-3.5 px-5">
-                                <input type="text" value="1.25" class="grade-input w-24 p-1.5 border border-gray-200 rounded text-xs focus:ring-1 focus:ring-brand-primary">
+                            <td class="py-3.5 px-3 sm:px-5 whitespace-nowrap">
+                                <input type="text" value="1.25" class="grade-input w-20 sm:w-24 p-1.5 border border-gray-200 rounded text-xs focus:ring-1 focus:ring-brand-primary">
                             </td>
-                            <td class="py-3.5 px-5 text-center">
+                            <td class="py-3.5 px-3 sm:px-5 text-center whitespace-nowrap">
                                 <span class="status-badge px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800">Draft</span>
                             </td>
-                            <td class="py-3.5 px-5 text-right space-x-1">
+                            <td class="py-3.5 px-3 sm:px-5 text-right whitespace-nowrap space-x-1">
                                 <button type="button" onclick="saveDraft(this)" class="px-2.5 py-1 rounded text-[11px] font-semibold border border-gray-200 bg-white hover:bg-gray-50">Save Draft</button>
                                 <button type="button" onclick="handleRelease(this)" class="btn-release px-2.5 py-1 rounded text-[11px] font-semibold bg-brand-primary text-white hover:bg-brand-primary/90">Release</button>
                             </td>
                         </tr>
                         <!-- Student 2 (Already Released) -->
-                        <tr data-student="2026-00002" data-released="true">
-                            <td class="py-3.5 px-5">
+                        <tr data-student="2026-00002" data-released="true" class="hover:bg-gray-50/50 group">
+                            <td class="py-3.5 px-3 sm:px-5 whitespace-nowrap sticky left-0 bg-white group-hover:bg-gray-50/50 z-10 shadow-[1px_0_0_0_#f3f4f6]">
                                 <p class="font-bold text-brand-dark">Jane Smith</p>
                                 <p class="text-gray-400 text-[11px] font-mono">2026-00002</p>
                             </td>
-                            <td class="py-3.5 px-5">
-                                <input type="text" value="1.50" class="grade-input w-24 p-1.5 border border-gray-200 rounded text-xs focus:ring-1 focus:ring-brand-primary">
+                            <td class="py-3.5 px-3 sm:px-5 whitespace-nowrap">
+                                <input type="text" value="1.50" class="grade-input w-20 sm:w-24 p-1.5 border border-gray-200 rounded text-xs focus:ring-1 focus:ring-brand-primary">
                             </td>
-                            <td class="py-3.5 px-5 text-center">
+                            <td class="py-3.5 px-3 sm:px-5 text-center whitespace-nowrap">
                                 <span class="status-badge px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">Released</span>
                             </td>
-                            <td class="py-3.5 px-5 text-right space-x-1">
+                            <td class="py-3.5 px-3 sm:px-5 text-right whitespace-nowrap space-x-1">
                                 <button type="button" onclick="handleRelease(this)" class="btn-release px-2.5 py-1 rounded text-[11px] font-semibold bg-gray-200 text-gray-700 hover:bg-gray-300">Edit Grade</button>
                             </td>
                         </tr>
