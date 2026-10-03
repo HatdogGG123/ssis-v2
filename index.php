@@ -40,11 +40,6 @@
                     S.S.I.S
                 </span>
             </a>
-
-            <!-- Language Selector -->
-            <button id="redirectToLoginBtn" class="flex items-center space-x-1 text-md font-medium text-brand-accent/90 hover:text-white transition focus:outline-none">
-                <span>Login</span>
-            </button>
         </header>
 
         <!-- Bottom Content Area -->
@@ -66,8 +61,8 @@
                     </p>
 
                     <!-- Apply Now Button -->
-                    <a href="login.php" class="inline-flex items-center justify-center bg-brand-accent text-brand-dark font-semibold px-8 py-3.5 rounded-full hover:bg-white transition shadow-lg text-sm tracking-wide">
-                        Apply Now
+                    <a href="login.php" class="inline-flex items-center justify-center bg-brand-accent text-brand-dark font-semibold px-8 py-3.5 rounded-full hover:bg-white transition shadow-lg text-sm">
+                        Login Now
                     </a>
                 </div>
 
