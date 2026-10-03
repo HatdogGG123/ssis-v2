@@ -60,11 +60,11 @@
                 </div>
 
                 <!-- Desktop Navigation Links (Cashier Role) -->
-                <nav class="hidden lg:flex items-center space-x-1">
+                <nav class="hidden md:flex items-center space-x-1">
                     <a href="dashboard.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Dashboard</a>
                     <a href="payments.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Payments & Reports</a>
                     <a href="clearance.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Clearance</a>
-                    <a href="clearance.php" class="px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30 border border-brand-secondary/20">Notifications</a>
+                    <a href="notifications.php" class="px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30 border border-brand-secondary/20">Notifications</a>
                 </nav>
 
                 <!-- Action Controls -->
