@@ -59,18 +59,15 @@
                     </div>
                 </div>
 
-                <!-- Desktop Navigation Links -->
+                <!-- Desktop Navigation Links (Updated Registrar Navigation Pages) -->
                 <nav class="hidden lg:flex items-center space-x-1 text-xs">
-                    <a href="dashboard.php" class="px-2.5 py-2 rounded-md font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Dashboard</a>
-                    <a href="students.php" class="px-2.5 py-2 rounded-md font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Student Records</a>
-                    <a href="curriculums.php" class="px-2.5 py-2 rounded-md font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Curriculums</a>
-                    <a href="enrollment.php" class="px-2.5 py-2 rounded-md font-semibold text-brand-primary bg-brand-accent/30 border border-brand-secondary/20">Enrolment</a>
-                    <a href="sections.php" class="px-2.5 py-2 rounded-md font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Sections</a>
-                    <a href="grades.php" class="px-2.5 py-2 rounded-md font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Grades & Transcripts</a>
-                    <a href="clearance.php" class="px-2.5 py-2 rounded-md font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Clearance</a>
-                    <a href="requests.php" class="px-2.5 py-2 rounded-md font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Requests</a>
-                    <a href="announcements.php" class="px-2.5 py-2 rounded-md font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Announcements</a>
-                    <a href="reports.php" class="px-2.5 py-2 rounded-md font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Reports</a>
+                    <a href="enrollment.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Enrollment</a>
+                    <a href="grades.php" class="block px-3 py-2 rounded-md text-sm font-medium text-brand-primary">Grades</a>
+                    <a href="studentRecords.php" class="block px-3 py-2 rounded-md text-sm font-semibold text-gray-600 hover:bg-gray-50 bg-brand-accent/30">Student Records</a>
+                    <a href="clearance.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Clearance</a>
+                    <a href="documentRequest.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Document Requests</a>
+                    <a href="announcements.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Announcements</a>
+                    <a href="reports.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Reports</a>
                 </nav>
 
                 <!-- Action Controls -->
@@ -103,18 +100,15 @@
             </div>
         </div>
 
-        <!-- Mobile & Tablet Menu Dropdown -->
+        <!-- Mobile & Tablet Menu Dropdown (Updated Registrar Navigation Pages) -->
         <div id="mobile_menu" class="hidden lg:hidden border-t border-gray-200 bg-white px-4 pt-2 pb-4 space-y-1">
-            <a href="dashboard.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Dashboard</a>
-            <a href="students.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Student Records</a>
-            <a href="curriculums.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Curriculums & Subjects</a>
-            <a href="enrollment.php" class="block px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30">Enrolment Management</a>
-            <a href="sections.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Subject Sections & Schedules</a>
-            <a href="grades.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Grades & Transcripts</a>
-            <a href="clearance.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Clearance Management</a>
-            <a href="requests.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Document Requests</a>
+            <a href="enrollment.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Enrollment</a>
+            <a href="grades.php" class="block px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30">Grades</a>
+            <a href="studentRecords.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Student Records</a>
+            <a href="clearance.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Clearance</a>
+            <a href="documentRequest.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Document Requests</a>
             <a href="announcements.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Announcements</a>
-            <a href="reports.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Reports & Analytics</a>
+            <a href="reports.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Reports</a>
             <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
                 <div>
                     <p class="text-sm font-semibold text-brand-dark">Registrar Staff</p>
