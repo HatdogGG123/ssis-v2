@@ -59,9 +59,8 @@
 
                 <!-- Desktop Navigation Links -->
                 <nav class="hidden lg:flex items-center space-x-1">
-                    <a href="dashboard.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Dashboard</a>
                     <a href="clearance.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Clearance Approval</a>
-                    <a href="department_report.php" class="px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30 border border-brand-secondary/20">Reports</a>
+                    <a href="report.php" class="px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30 border border-brand-secondary/20">Reports</a>
                     <a href="notifications.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Notifications</a>
                 </nav>
 
@@ -90,9 +89,8 @@
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobile_menu" class="hidden lg:hidden border-t border-gray-200 bg-white px-4 pt-2 pb-4 space-y-1">
-            <a href="dashboard.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Dashboard</a>
             <a href="clearance.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Clearance Approval</a>
-            <a href="department_report.php" class="block px-3 py-2 rounded-md text-base font-semibold text-brand-primary bg-brand-accent/30">Reports</a>
+            <a href="report.php" class="block px-3 py-2 rounded-md text-base font-semibold text-brand-primary bg-brand-accent/30">Reports</a>
             <a href="notifications.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Notifications</a>
             <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
                 <div>
@@ -189,7 +187,7 @@
                     </thead>
                     <tbody class="divide-y divide-gray-100 text-gray-700 font-medium">
                         <tr class="hover:bg-gray-50/50 transition-colors">
-                            <td class="py-3.5 px-5 font-bold font-mono text-brand-dark">2023-00124</td>
+                            <td class="py-3.5 px-5 font-bold font-display text-brand-dark">2023-00124</td>
                             <td class="py-3.5 px-5 font-semibold text-brand-dark">Ana Gomez</td>
                             <td class="py-3.5 px-5">BS CS - 4th Year</td>
                             <td class="py-3.5 px-5 text-red-600">Lab Equipment Return Pending</td>
@@ -198,7 +196,7 @@
                             </td>
                         </tr>
                         <tr class="hover:bg-gray-50/50 transition-colors">
-                            <td class="py-3.5 px-5 font-bold font-mono text-brand-dark">2024-00512</td>
+                            <td class="py-3.5 px-5 font-bold font-display text-brand-dark">2024-00512</td>
                             <td class="py-3.5 px-5 font-semibold text-brand-dark">Mark Bautista</td>
                             <td class="py-3.5 px-5">BS IT - 3rd Year</td>
                             <td class="py-3.5 px-5 text-gray-400">None (All requirements met)</td>

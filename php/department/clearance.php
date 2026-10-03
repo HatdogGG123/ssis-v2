@@ -50,6 +50,7 @@
                 <!-- Desktop Navigation Links -->
                 <nav class="hidden lg:flex items-center space-x-1 text-xs">
                     <a href="clearance.php" class="block px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30">Clearance Queue</a>
+                    <a href="report.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Reports</a>
                     <a href="notifications.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Notifications</a>
                 </nav>
 
@@ -74,7 +75,8 @@
         <!-- Mobile Navigation Dropdown Container -->
         <div id="mobile_nav_menu" class="hidden lg:hidden border-t border-gray-200 bg-white px-4 pt-2 pb-4 space-y-1 text-xs shadow-md">
             <a href="clearance.php" class="block px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30">Clearance Queue</a>
-            <a href="notifications.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Notifcations</a>
+            <a href="report.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Reports</a>
+            <a href="notifications.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Notifications</a>
 
             <div class="pt-3 border-t border-gray-100 flex items-center justify-between px-3">
                 <div>
@@ -211,7 +213,7 @@
                         <tr class="hover:bg-gray-50/50 student-row" data-program="BSCS" data-year="4th Year" data-status="Pending">
                             <td class="py-3.5 px-5 whitespace-nowrap">
                                 <p class="font-bold text-brand-dark">Alex Santos</p>
-                                <p class="text-gray-400 text-[11px] font-mono">2026-01042</p>
+                                <p class="text-gray-400 text-[11px] font-display">2026-01042</p>
                             </td>
                             <td class="py-3.5 px-5 whitespace-nowrap">
                                 <p class="font-semibold text-brand-dark">BS Computer Science</p>
@@ -233,7 +235,7 @@
                         <tr class="hover:bg-gray-50/50 student-row" data-program="BSIT" data-year="3rd Year" data-status="Pending">
                             <td class="py-3.5 px-5 whitespace-nowrap">
                                 <p class="font-bold text-brand-dark">Maria Clara</p>
-                                <p class="text-gray-400 text-[11px] font-mono">2026-01089</p>
+                                <p class="text-gray-400 text-[11px] font-display">2026-01089</p>
                             </td>
                             <td class="py-3.5 px-5 whitespace-nowrap">
                                 <p class="font-semibold text-brand-dark">BS Information Technology</p>
@@ -255,7 +257,7 @@
                         <tr class="hover:bg-gray-50/50 student-row" data-program="BSCS" data-year="2nd Year" data-status="Approved">
                             <td class="py-3.5 px-5 whitespace-nowrap">
                                 <p class="font-bold text-brand-dark">Juan Dela Cruz</p>
-                                <p class="text-gray-400 text-[11px] font-mono">2026-00311</p>
+                                <p class="text-gray-400 text-[11px] font-display">2026-00311</p>
                             </td>
                             <td class="py-3.5 px-5 whitespace-nowrap">
                                 <p class="font-semibold text-brand-dark">BS Computer Science</p>
@@ -277,7 +279,7 @@
                         <tr class="hover:bg-gray-50/50 student-row" data-program="BSIS" data-year="4th Year" data-status="Rejected">
                             <td class="py-3.5 px-5 whitespace-nowrap">
                                 <p class="font-bold text-brand-dark">Samantha Reyes</p>
-                                <p class="text-gray-400 text-[11px] font-mono">2026-00155</p>
+                                <p class="text-gray-400 text-[11px] font-display">2026-00155</p>
                             </td>
                             <td class="py-3.5 px-5 whitespace-nowrap">
                                 <p class="font-semibold text-brand-dark">BS Information Systems</p>
@@ -334,7 +336,7 @@
                         <p id="modal_student_name" class="font-bold text-sm text-brand-dark">Alex Santos</p>
                         <span id="modal_current_badge" class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800">Pending</span>
                     </div>
-                    <p id="modal_student_id_prog" class="text-gray-500 font-mono">2026-01042 • BS Computer Science (4th Year)</p>
+                    <p id="modal_student_id_prog" class="text-gray-500 font-display">2026-01042 • BS Computer Science (4th Year)</p>
                 </div>
 
                 <!-- Clearance Requirement Detail -->

@@ -205,7 +205,7 @@
                         <tbody class="divide-y divide-gray-100 text-gray-700 font-medium">
                             <!-- Row 1: Uncleared (On Hold) -->
                             <tr class="hover:bg-gray-50/50 transition-colors">
-                                <td class="py-3 px-3 font-mono font-bold text-brand-dark whitespace-nowrap">2026-00012</td>
+                                <td class="py-3 px-3 font-display font-bold text-brand-dark whitespace-nowrap">2026-00012</td>
                                 <td class="py-3 px-3 min-w-[130px] max-w-[160px]">
                                     <div class="font-bold text-brand-dark truncate" title="Pedro Penduko">Pedro Penduko</div>
                                 </td>
@@ -228,7 +228,7 @@
 
                             <!-- Row 2: Pending Review -->
                             <tr class="hover:bg-gray-50/50 transition-colors">
-                                <td class="py-3 px-3 font-mono font-bold text-brand-dark whitespace-nowrap">2026-00045</td>
+                                <td class="py-3 px-3 font-display font-bold text-brand-dark whitespace-nowrap">2026-00045</td>
                                 <td class="py-3 px-3 min-w-[130px] max-w-[160px]">
                                     <div class="font-bold text-brand-dark truncate" title="Juan Dela Cruz">Juan Dela Cruz</div>
                                 </td>
@@ -251,7 +251,7 @@
 
                             <!-- Row 3: Cleared -->
                             <tr class="hover:bg-gray-50/50 transition-colors">
-                                <td class="py-3 px-3 font-mono font-bold text-brand-dark whitespace-nowrap">2026-00088</td>
+                                <td class="py-3 px-3 font-display font-bold text-brand-dark whitespace-nowrap">2026-00088</td>
                                 <td class="py-3 px-3 min-w-[130px] max-w-[160px]">
                                     <div class="font-bold text-brand-dark truncate" title="Maria Clara">Maria Clara</div>
                                 </td>
@@ -306,10 +306,10 @@
                         </thead>
                         <tbody class="divide-y divide-gray-100 text-gray-700 font-medium">
                             <tr class="hover:bg-gray-50/50">
-                                <td class="py-3 px-4 font-mono font-bold text-brand-dark">OR-2026-0042</td>
+                                <td class="py-3 px-4 font-display font-bold text-brand-dark">OR-2026-0042</td>
                                 <td class="py-3 px-4">DR-2026-0008</td>
                                 <td class="py-3 px-4">Andres Bonifacio</td>
-                                <td class="py-3 px-4 font-mono text-gray-500">N/A (Walk-in)</td>
+                                <td class="py-3 px-4 font-display text-gray-500">N/A (Walk-in)</td>
                                 <td class="py-3 px-4">Cash</td>
                                 <td class="py-3 px-4 text-right font-bold">₱150.00</td>
                                 <td class="py-3 px-4 text-right">
@@ -317,10 +317,10 @@
                                 </td>
                             </tr>
                             <tr class="hover:bg-gray-50/50">
-                                <td class="py-3 px-4 font-mono font-bold text-brand-dark">OR-2026-0041</td>
+                                <td class="py-3 px-4 font-display font-bold text-brand-dark">OR-2026-0041</td>
                                 <td class="py-3 px-4">DR-2026-0004</td>
                                 <td class="py-3 px-4">Apolinario Mabini</td>
-                                <td class="py-3 px-4 font-mono text-gray-500">9910283920</td>
+                                <td class="py-3 px-4 font-display text-gray-500">9910283920</td>
                                 <td class="py-3 px-4">GCash</td>
                                 <td class="py-3 px-4 text-right font-bold">₱200.00</td>
                                 <td class="py-3 px-4 text-right space-x-2">
@@ -406,7 +406,7 @@
                     </div>
                     <div class="flex justify-between border-b border-gray-200/60 pb-1.5">
                         <span class="text-gray-500">Submitted Method & Ref:</span>
-                        <span id="verify_display_method_ref" class="font-mono text-gray-800">GCash - 9021849201</span>
+                        <span id="verify_display_method_ref" class="font-display text-gray-800">GCash - 9021849201</span>
                     </div>
                     <div class="flex justify-between pt-0.5">
                         <span class="text-gray-500 font-semibold">Total Amount Due:</span>
@@ -417,7 +417,7 @@
                 <div class="grid grid-cols-2 gap-3">
                     <div>
                         <label class="block text-xs font-semibold text-gray-700 mb-1">Generated Receipt No.</label>
-                        <input type="text" id="verify_or_number" readonly value="OR-2026-0043" class="w-full px-3 py-1.5 text-xs bg-gray-100 font-mono font-bold text-brand-primary border border-gray-200 rounded-md focus:outline-none cursor-not-allowed">
+                        <input type="text" id="verify_or_number" readonly value="OR-2026-0043" class="w-full px-3 py-1.5 text-xs bg-gray-100 font-display font-bold text-brand-primary border border-gray-200 rounded-md focus:outline-none cursor-not-allowed">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-gray-700 mb-1">Verification Date</label>
@@ -554,7 +554,7 @@
             <form id="form_release_clearance" class="p-4 space-y-4 text-xs">
                 <input type="hidden" id="release_clearance_id">
                 <p class="text-gray-600">
-                    Are you sure you want to clear student <strong id="release_student_name" class="text-brand-dark">Pedro Penduko</strong> (<span id="release_student_id" class="font-mono">2026-00012</span>)?
+                    Are you sure you want to clear student <strong id="release_student_name" class="text-brand-dark">Pedro Penduko</strong> (<span id="release_student_id" class="font-display">2026-00012</span>)?
                 </p>
                 <div class="p-3 bg-gray-50 border border-gray-200 rounded-md">
                     <span class="text-gray-500 block">Outstanding Balance:</span>
@@ -590,7 +590,7 @@
                     </div>
                     <div class="flex justify-between">
                         <span class="text-gray-500">Student ID:</span>
-                        <span id="detail_student_id" class="font-mono text-gray-700">2026-00045</span>
+                        <span id="detail_student_id" class="font-display text-gray-700">2026-00045</span>
                     </div>
                     <div class="flex justify-between">
                         <span class="text-gray-500">Unpaid Balance:</span>

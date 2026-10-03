@@ -207,7 +207,7 @@
                                 </td>
                                 <td class="py-3.5 px-4">
                                     <div class="font-semibold text-gray-800">GCash</div>
-                                    <div class="text-[10px] font-mono text-gray-500">9021849201</div>
+                                    <div class="text-[10px] font-display text-gray-500">9021849201</div>
                                 </td>
                                 <td class="py-3.5 px-4 text-right font-bold text-brand-dark">₱150.00</td>
                                 <td class="py-3.5 px-4 text-center">
@@ -222,7 +222,7 @@
                                 </td>
                                 <td class="py-3.5 px-4">
                                     <div class="font-semibold text-gray-800">Bank Transfer</div>
-                                    <div class="text-[10px] font-mono text-gray-500">UB-8830192</div>
+                                    <div class="text-[10px] font-display text-gray-500">UB-8830192</div>
                                 </td>
                                 <td class="py-3.5 px-4 text-right font-bold text-brand-dark">₱300.00</td>
                                 <td class="py-3.5 px-4 text-center">
@@ -237,7 +237,7 @@
                                 </td>
                                 <td class="py-3.5 px-4">
                                     <div class="font-semibold text-gray-800">GCash</div>
-                                    <div class="text-[10px] font-mono text-gray-500">9175550192</div>
+                                    <div class="text-[10px] font-display text-gray-500">9175550192</div>
                                 </td>
                                 <td class="py-3.5 px-4 text-right font-bold text-brand-dark">₱100.00</td>
                                 <td class="py-3.5 px-4 text-center">

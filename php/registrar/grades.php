@@ -161,7 +161,7 @@
                         <tr data-student="2026-00001" class="hover:bg-gray-50/50 group">
                             <td class="py-3.5 px-3 sm:px-5 whitespace-nowrap sticky left-0 bg-white group-hover:bg-gray-50/50 z-10 shadow-[1px_0_0_0_#f3f4f6]">
                                 <p class="font-bold text-brand-dark">John Doe</p>
-                                <p class="text-gray-400 text-[11px] font-mono">2026-00001</p>
+                                <p class="text-gray-400 text-[11px] font-display">2026-00001</p>
                             </td>
                             <td class="py-3.5 px-3 sm:px-5 whitespace-nowrap">
                                 <input type="text" value="1.25" class="grade-input w-20 sm:w-24 p-1.5 border border-gray-200 rounded text-xs focus:ring-1 focus:ring-brand-primary">
@@ -178,7 +178,7 @@
                         <tr data-student="2026-00002" data-released="true" class="hover:bg-gray-50/50 group">
                             <td class="py-3.5 px-3 sm:px-5 whitespace-nowrap sticky left-0 bg-white group-hover:bg-gray-50/50 z-10 shadow-[1px_0_0_0_#f3f4f6]">
                                 <p class="font-bold text-brand-dark">Jane Smith</p>
-                                <p class="text-gray-400 text-[11px] font-mono">2026-00002</p>
+                                <p class="text-gray-400 text-[11px] font-display">2026-00002</p>
                             </td>
                             <td class="py-3.5 px-3 sm:px-5 whitespace-nowrap">
                                 <input type="text" value="1.50" class="grade-input w-20 sm:w-24 p-1.5 border border-gray-200 rounded text-xs focus:ring-1 focus:ring-brand-primary">

@@ -148,7 +148,7 @@
                         <tr class="hover:bg-gray-50/50 group">
                             <td class="py-3.5 px-4 sm:px-5 whitespace-nowrap sticky left-0 bg-white group-hover:bg-gray-50/50 z-10 shadow-[1px_0_0_0_#f3f4f6]">
                                 <p class="font-bold text-brand-dark">John Doe</p>
-                                <p class="text-gray-400 text-[11px] font-mono">2026-00001</p>
+                                <p class="text-gray-400 text-[11px] font-display">2026-00001</p>
                             </td>
                             <td class="py-3.5 px-4 sm:px-5 whitespace-nowrap">BS Computer Science</td>
                             <td class="py-3.5 px-4 sm:px-5 whitespace-nowrap">3rd Year</td>
@@ -164,7 +164,7 @@
                         <tr class="hover:bg-gray-50/50 group">
                             <td class="py-3.5 px-4 sm:px-5 whitespace-nowrap sticky left-0 bg-white group-hover:bg-gray-50/50 z-10 shadow-[1px_0_0_0_#f3f4f6]">
                                 <p class="font-bold text-brand-dark">Maria Clara</p>
-                                <p class="text-gray-400 text-[11px] font-mono">2026-00003</p>
+                                <p class="text-gray-400 text-[11px] font-display">2026-00003</p>
                             </td>
                             <td class="py-3.5 px-4 sm:px-5 whitespace-nowrap">BS Computer Science</td>
                             <td class="py-3.5 px-4 sm:px-5 whitespace-nowrap">2nd Year</td>
@@ -181,7 +181,7 @@
                         <tr class="hover:bg-gray-50/50 group">
                             <td class="py-3.5 px-4 sm:px-5 whitespace-nowrap sticky left-0 bg-white group-hover:bg-gray-50/50 z-10 shadow-[1px_0_0_0_#f3f4f6]">
                                 <p class="font-bold text-brand-dark">Juan Dela Cruz</p>
-                                <p class="text-gray-400 text-[11px] font-mono">2026-00004</p>
+                                <p class="text-gray-400 text-[11px] font-display">2026-00004</p>
                             </td>
                             <td class="py-3.5 px-4 sm:px-5 whitespace-nowrap">BS Information Technology</td>
                             <td class="py-3.5 px-4 sm:px-5 whitespace-nowrap">4th Year</td>
@@ -197,7 +197,7 @@
                         <tr class="hover:bg-gray-50/50 group">
                             <td class="py-3.5 px-4 sm:px-5 whitespace-nowrap sticky left-0 bg-white group-hover:bg-gray-50/50 z-10 shadow-[1px_0_0_0_#f3f4f6]">
                                 <p class="font-bold text-brand-dark">Jane Smith</p>
-                                <p class="text-gray-400 text-[11px] font-mono">2026-00002</p>
+                                <p class="text-gray-400 text-[11px] font-display">2026-00002</p>
                             </td>
                             <td class="py-3.5 px-4 sm:px-5 whitespace-nowrap">BS Information Technology</td>
                             <td class="py-3.5 px-4 sm:px-5 whitespace-nowrap">2nd Year</td>
@@ -213,7 +213,7 @@
                         <tr class="hover:bg-gray-50/50 group">
                             <td class="py-3.5 px-4 sm:px-5 whitespace-nowrap sticky left-0 bg-white group-hover:bg-gray-50/50 z-10 shadow-[1px_0_0_0_#f3f4f6]">
                                 <p class="font-bold text-brand-dark">Mark Santos</p>
-                                <p class="text-gray-400 text-[11px] font-mono">2026-00005</p>
+                                <p class="text-gray-400 text-[11px] font-display">2026-00005</p>
                             </td>
                             <td class="py-3.5 px-4 sm:px-5 whitespace-nowrap">BS Computer Science</td>
                             <td class="py-3.5 px-4 sm:px-5 whitespace-nowrap">1st Year</td>
@@ -260,7 +260,7 @@
                         </thead>
                         <tbody id="tbody_subject_list" class="divide-y divide-gray-100 font-medium">
                             <tr>
-                                <td class="py-2 px-3 font-mono font-bold">CCS109</td>
+                                <td class="py-2 px-3 font-display font-bold">CCS109</td>
                                 <td class="py-2 px-3">System Analysis & Design</td>
                                 <td class="py-2 px-3 text-center">3</td>
                                 <td class="py-2 px-3 text-right">
@@ -268,7 +268,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="py-2 px-3 font-mono font-bold">CS201</td>
+                                <td class="py-2 px-3 font-display font-bold">CS201</td>
                                 <td class="py-2 px-3">Data Structures & Algorithms</td>
                                 <td class="py-2 px-3 text-center">3</td>
                                 <td class="py-2 px-3 text-right">
@@ -276,7 +276,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="py-2 px-3 font-mono font-bold">MATH102</td>
+                                <td class="py-2 px-3 font-display font-bold">MATH102</td>
                                 <td class="py-2 px-3">Discrete Mathematics</td>
                                 <td class="py-2 px-3 text-center">3</td>
                                 <td class="py-2 px-3 text-right">
@@ -434,7 +434,7 @@
 
             const row = `
                 <tr>
-                    <td class="py-2 px-3 font-mono font-bold">${code}</td>
+                    <td class="py-2 px-3 font-display font-bold">${code}</td>
                     <td class="py-2 px-3">${name}</td>
                     <td class="py-2 px-3 text-center">${units}</td>
                     <td class="py-2 px-3 text-right">

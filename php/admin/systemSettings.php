@@ -59,14 +59,14 @@
                 <!-- Desktop Navigation Links -->
                 <nav class="hidden md:flex items-center space-x-1">
                     <a href="userManagement.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">User Management</a>
-                    <a href="systemSettings.php" class="px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30 border border-brand-secondary/20">System Settings</a>
+                    <a href="systemSettings.php" class="px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30 border border-brand-secondary/20 transition-colors">System Settings</a>
                     <a href="monitoring.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">System Monitoring</a>
                     <a href="notifications.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Notifications</a>
+                    <a href="report.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Reports</a>
                 </nav>
 
                 <!-- Action Controls -->
                 <div class="flex items-center space-x-3">
-
                     <div class="h-5 w-px bg-gray-200 hidden md:block"></div>
 
                     <!-- User Info / Profile -->
@@ -94,11 +94,11 @@
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobile_menu" class="hidden md:hidden border-t border-gray-200 bg-white px-4 pt-2 pb-4 space-y-1">
-            <a href="dashboard.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Dashboard</a>
-            <a href="users.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">User Management</a>
-            <a href="system.php" class="block px-3 py-2 rounded-md text-base font-semibold text-brand-primary bg-brand-accent/30">System Settings</a>
+            <a href="userManagement.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">User Management</a>
+            <a href="systemSettings.php" class="block px-3 py-2 rounded-md text-base font-semibold text-brand-primary bg-brand-accent/30">System Settings</a>
+            <a href="monitoring.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">System Monitoring</a>
+            <a href="notifications.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Notifications</a>
             <a href="report.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Reports</a>
-            <a href="audit.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Audit Logs</a>
         </div>
     </header>
 
@@ -316,7 +316,7 @@
                     <tbody class="divide-y divide-gray-100 text-gray-700">
                         <tr>
                             <td class="py-2.5 px-4 font-semibold row-doc-name">Official Transcript of Records (TOR)</td>
-                            <td class="py-2.5 px-4 font-mono row-doc-fee" data-raw-fee="150.00">₱150.00</td>
+                            <td class="py-2.5 px-4 font-display row-doc-fee" data-raw-fee="150.00">₱150.00</td>
                             <td class="py-2.5 px-4 text-center row-doc-status" data-status="1">
                                 <span class="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-700">
                                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Active
@@ -329,7 +329,7 @@
                         </tr>
                         <tr>
                             <td class="py-2.5 px-4 font-semibold row-doc-name">Certificate of Grades (COG)</td>
-                            <td class="py-2.5 px-4 font-mono row-doc-fee" data-raw-fee="50.00">₱50.00</td>
+                            <td class="py-2.5 px-4 font-display row-doc-fee" data-raw-fee="50.00">₱50.00</td>
                             <td class="py-2.5 px-4 text-center row-doc-status" data-status="1">
                                 <span class="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-700">
                                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Active

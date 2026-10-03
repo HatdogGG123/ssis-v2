@@ -217,7 +217,7 @@
                     <tbody class="divide-y divide-gray-100 text-gray-700 font-medium">
                         <!-- Row 1: Uncleared (On Hold) -->
                         <tr class="hover:bg-gray-50/50 transition-colors">
-                            <td class="py-3 px-3 font-mono font-bold text-brand-dark whitespace-nowrap">2026-00012</td>
+                            <td class="py-3 px-3 font-display font-bold text-brand-dark whitespace-nowrap">2026-00012</td>
                             <td class="py-3 px-3 min-w-[130px] max-w-[160px]">
                                 <div class="font-bold text-brand-dark truncate" title="Pedro Penduko">Pedro Penduko</div>
                             </td>
@@ -239,7 +239,7 @@
 
                         <!-- Row 2: Pending Review -->
                         <tr class="hover:bg-gray-50/50 transition-colors">
-                            <td class="py-3 px-3 font-mono font-bold text-brand-dark whitespace-nowrap">2026-00045</td>
+                            <td class="py-3 px-3 font-display font-bold text-brand-dark whitespace-nowrap">2026-00045</td>
                             <td class="py-3 px-3 min-w-[130px] max-w-[160px]">
                                 <div class="font-bold text-brand-dark truncate" title="Juan Dela Cruz">Juan Dela Cruz</div>
                             </td>
@@ -261,7 +261,7 @@
 
                         <!-- Row 3: Cleared -->
                         <tr class="hover:bg-gray-50/50 transition-colors">
-                            <td class="py-3 px-3 font-mono font-bold text-brand-dark whitespace-nowrap">2026-00088</td>
+                            <td class="py-3 px-3 font-display font-bold text-brand-dark whitespace-nowrap">2026-00088</td>
                             <td class="py-3 px-3 min-w-[130px] max-w-[160px]">
                                 <div class="font-bold text-brand-dark truncate" title="Maria Clara">Maria Clara</div>
                             </td>

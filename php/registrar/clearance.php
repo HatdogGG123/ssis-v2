@@ -134,7 +134,7 @@
                         <tr class="hover:bg-gray-50/50">
                             <td class="py-3.5 px-5 whitespace-nowrap">
                                 <p class="font-bold text-brand-dark">John Doe</p>
-                                <p class="text-gray-400 text-[11px] font-mono">2026-00001 (BSCS)</p>
+                                <p class="text-gray-400 text-[11px] font-display">2026-00001 (BSCS)</p>
                             </td>
                             <td class="py-3.5 px-5">
                                 <p class="font-semibold text-brand-dark">Form 137 / Official Transcript</p>
@@ -157,7 +157,7 @@
                         <tr class="hover:bg-gray-50/50">
                             <td class="py-3.5 px-5 whitespace-nowrap">
                                 <p class="font-bold text-brand-dark">Jane Smith</p>
-                                <p class="text-gray-400 text-[11px] font-mono">2026-00002 (BSIT)</p>
+                                <p class="text-gray-400 text-[11px] font-display">2026-00002 (BSIT)</p>
                             </td>
                             <td class="py-3.5 px-5">
                                 <p class="font-semibold text-brand-dark">Honorable Dismissal & Birth Cert</p>
@@ -178,7 +178,7 @@
                         <tr class="hover:bg-gray-50/50">
                             <td class="py-3.5 px-5 whitespace-nowrap">
                                 <p class="font-bold text-brand-dark">Alex Mercer</p>
-                                <p class="text-gray-400 text-[11px] font-mono">2026-00003 (BSIS)</p>
+                                <p class="text-gray-400 text-[11px] font-display">2026-00003 (BSIS)</p>
                             </td>
                             <td class="py-3.5 px-5">
                                 <p class="font-semibold text-brand-dark">PSA Birth Certificate Copy</p>
@@ -270,7 +270,7 @@
                 <div class="p-4 bg-gray-50 border border-gray-200 rounded-md flex items-center justify-between">
                     <div>
                         <p id="modal_student_name" class="font-bold text-sm text-brand-dark">John Doe</p>
-                        <p id="modal_student_id" class="text-gray-500 font-mono">2026-00001 • BS Computer Science</p>
+                        <p id="modal_student_id" class="text-gray-500 font-display">2026-00001 • BS Computer Science</p>
                     </div>
                     <span id="modal_overall_badge" class="px-2.5 py-1 rounded-md text-xs font-bold bg-amber-100 text-amber-800">Pending Holds</span>
                 </div>

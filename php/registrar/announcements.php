@@ -305,7 +305,7 @@
                             <tr class="hover:bg-gray-50/50">
                                 <td class="py-3.5 px-5 whitespace-nowrap">
                                     <p class="font-bold text-brand-dark">John Doe</p>
-                                    <p class="text-gray-400 text-[11px] font-mono">2026-00001</p>
+                                    <p class="text-gray-400 text-[11px] font-display">2026-00001</p>
                                 </td>
                                 <td class="py-3.5 px-5">
                                     <p class="font-semibold text-brand-dark">Missing Form 137 Document Clearance</p>
@@ -326,7 +326,7 @@
                             <tr class="hover:bg-gray-50/50">
                                 <td class="py-3.5 px-5 whitespace-nowrap">
                                     <p class="font-bold text-brand-dark">Alex Mercer</p>
-                                    <p class="text-gray-400 text-[11px] font-mono">2026-00003</p>
+                                    <p class="text-gray-400 text-[11px] font-display">2026-00003</p>
                                 </td>
                                 <td class="py-3.5 px-5">
                                     <p class="font-semibold text-brand-dark">PSA Birth Certificate Re-upload Required</p>
@@ -390,7 +390,7 @@
                 <div class="p-3 bg-gray-50 border border-gray-200 rounded-md flex justify-between items-center">
                     <div>
                         <p id="view_msg_student_name" class="font-bold text-brand-dark"></p>
-                        <p id="view_msg_student_id" class="text-gray-500 font-mono text-[11px]"></p>
+                        <p id="view_msg_student_id" class="text-gray-500 font-display text-[11px]"></p>
                     </div>
                     <span id="view_msg_category" class="px-2.5 py-0.5 rounded-md text-[10px] font-bold bg-amber-50 text-amber-800 border border-amber-200"></span>
                 </div>

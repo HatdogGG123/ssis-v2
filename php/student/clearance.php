@@ -183,35 +183,27 @@
                     <thead>
                         <tr class="bg-gray-50/80 border-b border-gray-100 text-gray-500 uppercase tracking-wider font-semibold">
                             <th class="py-3 px-5">Department / Office</th>
-                            <th class="py-3 px-5">Requirement Description</th>
                             <th class="py-3 px-5 text-center">Status</th>
-                            <th class="py-3 px-5 text-right">Remarks / Action Needed</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-100 text-gray-700 font-medium">
                         <tr class="hover:bg-gray-50/50 transition-colors">
                             <td class="py-3.5 px-5 font-bold text-brand-dark">University Library</td>
-                            <td class="py-3.5 px-5">Book Returns & Outstanding Fines</td>
                             <td class="py-3.5 px-5 text-center">
                                 <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-100 text-emerald-800">Approved</span>
                             </td>
-                            <td class="py-3.5 px-5 text-right text-gray-500">All borrowed books returned. No pending fines.</td>
                         </tr>
                         <tr class="hover:bg-gray-50/50 transition-colors">
                             <td class="py-3.5 px-5 font-bold text-brand-dark">Accounting / Cashier</td>
-                            <td class="py-3.5 px-5">Tuition Balance Clearance</td>
                             <td class="py-3.5 px-5 text-center">
                                 <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-100 text-emerald-800">Approved</span>
                             </td>
-                            <td class="py-3.5 px-5 text-right text-gray-500">Tuition fully settled for active term.</td>
                         </tr>
                         <tr class="hover:bg-gray-50/50 transition-colors">
                             <td class="py-3.5 px-5 font-bold text-brand-dark">Student Affairs (OSA)</td>
-                            <td class="py-3.5 px-5">Student Exit Interview & Form 102</td>
                             <td class="py-3.5 px-5 text-center">
                                 <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-amber-100 text-amber-800">Pending</span>
                             </td>
-                            <td class="py-3.5 px-5 text-right font-medium text-amber-700">Submit hard copy of Form 102 to OSA counter.</td>
                         </tr>
                     </tbody>
                 </table>

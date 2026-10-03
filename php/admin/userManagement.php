@@ -58,10 +58,11 @@
 
                 <!-- Desktop Navigation Links -->
                 <nav class="hidden md:flex items-center space-x-1">
-                    <a href="userManagement.php" class="px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30 border border-brand-secondary/20">User Management</a>
+                    <a href="userManagement.php" class="px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30 border border-brand-secondary/20 transition-colors">User Management</a>
                     <a href="systemSettings.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">System Settings</a>
                     <a href="monitoring.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">System Monitoring</a>
                     <a href="notifications.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Notifications</a>
+                    <a href="report.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Reports</a>
                 </nav>
 
                 <!-- Action Controls -->
@@ -93,18 +94,11 @@
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobile_menu" class="hidden md:hidden border-t border-gray-200 bg-white px-4 pt-2 pb-4 space-y-1">
-            <a href="dashboard.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Dashboard</a>
-            <a href="users.php" class="block px-3 py-2 rounded-md text-base font-semibold text-brand-primary bg-brand-accent/30">User Management</a>
-            <a href="system.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">System Settings</a>
+            <a href="userManagement.php" class="block px-3 py-2 rounded-md text-base font-semibold text-brand-primary bg-brand-accent/30">User Management</a>
+            <a href="systemSettings.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">System Settings</a>
+            <a href="monitoring.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">System Monitoring</a>
+            <a href="notifications.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Notifications</a>
             <a href="report.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Reports</a>
-            <a href="audit.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Audit Logs</a>
-            <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
-                <div>
-                    <p class="text-sm font-semibold text-brand-dark">System Administrator</p>
-                    <p class="text-xs text-gray-500">Admin</p>
-                </div>
-                <a href="logout.php" class="text-xs text-red-600 font-semibold hover:underline">Log Out</a>
-            </div>
         </div>
     </header>
 
@@ -472,7 +466,7 @@
 
             <div class="bg-gray-100 border border-gray-200 rounded-md p-3 text-center">
                 <span class="text-xs text-gray-400 block font-semibold uppercase tracking-wider">Temporary Password</span>
-                <span id="txt_generated_pw" class="text-lg font-mono font-bold text-brand-primary tracking-wider select-all">Pax#2026Temp</span>
+                <span id="txt_generated_pw" class="text-lg font-display font-bold text-brand-primary tracking-wider select-all">Pax#2026Temp</span>
             </div>
 
             <p class="text-[11px] text-gray-500 text-center leading-normal">

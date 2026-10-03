@@ -42,7 +42,7 @@
 <body class="bg-gray-50 font-sans text-brand-dark antialiased min-h-screen flex flex-col">
 
     <!-- Top Navigation Bar -->
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-30 print:hidden">
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
 
@@ -53,16 +53,17 @@
                     </div>
                     <div>
                         <span class="text-base font-bold text-brand-dark tracking-tight block leading-none">PAXTON</span>
-                        <span class="text-[10px] uppercase font-semibold text-gray-500 tracking-widest block mt-0.5">University SSIS</span>
+                        <span class="text-[10px] uppercase font-semibold text-gray-500 tracking-widest block mt-0.5">University SSIS - Admin</span>
                     </div>
                 </div>
 
                 <!-- Desktop Navigation Links -->
-                <nav class="hidden lg:flex items-center space-x-1">
-                    <a href="dashboard.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Dashboard</a>
-                    <a href="users.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">User Management</a>
-                    <a href="admin_report.php" class="px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30 border border-brand-secondary/20">Audit Reports</a>
+                <nav class="hidden md:flex items-center space-x-1">
+                    <a href="userManagement.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">User Management</a>
+                    <a href="systemSettings.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">System Settings</a>
+                    <a href="monitoring.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">System Monitoring</a>
                     <a href="notifications.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Notifications</a>
+                    <a href="report.php" class="px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30 border border-brand-secondary/20 transition-colors">Reports</a>
                 </nav>
 
                 <!-- Action Controls -->
@@ -70,37 +71,35 @@
                     <div class="h-5 w-px bg-gray-200 hidden md:block"></div>
 
                     <!-- User Info / Profile -->
-                    <div class="hidden lg:flex items-center space-x-2">
+                    <div class="hidden md:flex items-center space-x-2">
                         <div class="text-right">
-                            <p class="text-xs font-semibold text-brand-dark">System Administrator</p>
-                            <p class="text-[10px] text-gray-500">Super Admin</p>
+                            <p id="nav_admin_name" class="text-xs font-semibold text-brand-dark">System Administrator</p>
+                            <p id="nav_admin_role" class="text-[10px] text-gray-500">Admin (admin_01)</p>
                         </div>
-                        <a href="logout.php" class="p-2 text-gray-400 hover:text-red-600 rounded-md hover:bg-gray-100 transition-colors" title="Log Out">
-                            <i data-lucide="log-out" class="w-5 h-5"></i>
+                        <a href="logout.php" id="nav_logout_btn" class="p-2 text-gray-400 hover:text-red-600 rounded-md hover:bg-gray-100 transition-colors" title="Log Out">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+                            </svg>
                         </a>
                     </div>
 
                     <!-- Mobile Menu Button -->
-                    <button id="mobile_menu_btn" type="button" class="lg:hidden p-2 rounded-md text-gray-600 hover:text-brand-primary hover:bg-gray-100 focus:outline-none">
-                        <i data-lucide="menu" class="w-5 h-5"></i>
+                    <button id="mobile_menu_btn" type="button" class="md:hidden p-2 rounded-md text-gray-600 hover:text-brand-primary hover:bg-gray-100 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
                     </button>
                 </div>
             </div>
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile_menu" class="hidden lg:hidden border-t border-gray-200 bg-white px-4 pt-2 pb-4 space-y-1">
-            <a href="dashboard.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Dashboard</a>
-            <a href="users.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">User Management</a>
-            <a href="admin_report.php" class="block px-3 py-2 rounded-md text-base font-semibold text-brand-primary bg-brand-accent/30">Audit Reports</a>
+        <div id="mobile_menu" class="hidden md:hidden border-t border-gray-200 bg-white px-4 pt-2 pb-4 space-y-1">
+            <a href="userManagement.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">User Management</a>
+            <a href="systemSettings.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">System Settings</a>
+            <a href="monitoring.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">System Monitoring</a>
             <a href="notifications.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Notifications</a>
-            <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
-                <div>
-                    <p class="text-sm font-semibold text-brand-dark">System Administrator</p>
-                    <p class="text-xs text-gray-500">Super Admin</p>
-                </div>
-                <a href="logout.php" class="text-xs text-red-600 font-semibold hover:underline">Log Out</a>
-            </div>
+            <a href="report.php" class="block px-3 py-2 rounded-md text-base font-semibold text-brand-primary bg-brand-accent/30">Reports</a>
         </div>
     </header>
 
@@ -202,24 +201,24 @@
                     </thead>
                     <tbody class="divide-y divide-gray-100 text-gray-700 font-medium">
                         <tr class="hover:bg-gray-50/50 transition-colors">
-                            <td class="py-3.5 px-5 font-mono text-[11px] text-gray-500">2026-10-03 14:22:10</td>
+                            <td class="py-3.5 px-5 font-display text-[11px] text-gray-500">2026-10-03 14:22:10</td>
                             <td class="py-3.5 px-5 font-semibold text-brand-dark">msantos_cashier</td>
                             <td class="py-3.5 px-5">Cashier</td>
                             <td class="py-3.5 px-5">
-                                <span class="font-mono text-[11px] font-bold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">VERIFY_PAYMENT</span>
+                                <span class="font-display text-[11px] font-bold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">VERIFY_PAYMENT</span>
                                 <span class="text-gray-500 ml-1">(OR# 2026-0881)</span>
                             </td>
-                            <td class="py-3.5 px-5 text-right font-mono text-[11px] text-gray-500">192.168.1.45</td>
+                            <td class="py-3.5 px-5 text-right font-display text-[11px] text-gray-500">192.168.1.45</td>
                         </tr>
                         <tr class="hover:bg-gray-50/50 transition-colors">
-                            <td class="py-3.5 px-5 font-mono text-[11px] text-gray-500">2026-10-03 14:18:05</td>
+                            <td class="py-3.5 px-5 font-display text-[11px] text-gray-500">2026-10-03 14:18:05</td>
                             <td class="py-3.5 px-5 font-semibold text-brand-dark">erostova_reg</td>
                             <td class="py-3.5 px-5">Registrar</td>
                             <td class="py-3.5 px-5">
-                                <span class="font-mono text-[11px] font-bold text-blue-800 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-200">RELEASE_GRADES</span>
+                                <span class="font-display text-[11px] font-bold text-blue-800 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-200">RELEASE_GRADES</span>
                                 <span class="text-gray-500 ml-1">(Section CCS109)</span>
                             </td>
-                            <td class="py-3.5 px-5 text-right font-mono text-[11px] text-gray-500">192.168.1.12</td>
+                            <td class="py-3.5 px-5 text-right font-display text-[11px] text-gray-500">192.168.1.12</td>
                         </tr>
                     </tbody>
                 </table>

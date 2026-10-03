@@ -175,12 +175,12 @@
                             <!-- Row 1: Pending Review -->
                             <tr class="hover:bg-gray-50/50" data-status="Pending" data-doc="TOR" data-mode="Pickup">
                                 <td class="py-3.5 px-5 space-y-0.5 whitespace-nowrap">
-                                    <p class="font-mono font-bold text-brand-primary">REQ-2026-0891</p>
+                                    <p class="font-display font-bold text-brand-primary">REQ-2026-0891</p>
                                     <p class="text-gray-400 text-[11px]">Oct 02, 2026 • 09:30 AM</p>
                                 </td>
                                 <td class="py-3.5 px-5 space-y-0.5 whitespace-nowrap">
                                     <p class="font-bold text-brand-dark">John Doe</p>
-                                    <p class="text-gray-400 text-[11px] font-mono">2026-00001 (BSCS)</p>
+                                    <p class="text-gray-400 text-[11px] font-display">2026-00001 (BSCS)</p>
                                 </td>
                                 <td class="py-3.5 px-5 space-y-0.5 min-w-[200px]">
                                     <p class="font-semibold text-brand-dark">Official Transcript of Records (TOR)</p>
@@ -204,12 +204,12 @@
                             <!-- Row 2: Ready for Pickup -->
                             <tr class="hover:bg-gray-50/50 bg-purple-50/10" data-status="Ready for Pickup" data-doc="GMC" data-mode="Pickup">
                                 <td class="py-3.5 px-5 space-y-0.5 whitespace-nowrap">
-                                    <p class="font-mono font-bold text-brand-primary">REQ-2026-0870</p>
+                                    <p class="font-display font-bold text-brand-primary">REQ-2026-0870</p>
                                     <p class="text-gray-400 text-[11px]">Sep 29, 2026 • 11:00 AM</p>
                                 </td>
                                 <td class="py-3.5 px-5 space-y-0.5 whitespace-nowrap">
                                     <p class="font-bold text-brand-dark">Alex Mercer</p>
-                                    <p class="text-gray-400 text-[11px] font-mono">2026-00003 (BSIS)</p>
+                                    <p class="text-gray-400 text-[11px] font-display">2026-00003 (BSIS)</p>
                                 </td>
                                 <td class="py-3.5 px-5 space-y-0.5 min-w-[200px]">
                                     <p class="font-semibold text-brand-dark">Good Moral Certificate</p>
@@ -246,7 +246,7 @@
             </div>
             <div class="p-6 space-y-4 text-xs">
                 <div class="p-3 bg-gray-50 border border-gray-200 rounded-md space-y-1">
-                    <p id="wf_ref_num" class="font-mono font-bold text-brand-primary text-sm">REQ-2026-0891</p>
+                    <p id="wf_ref_num" class="font-display font-bold text-brand-primary text-sm">REQ-2026-0891</p>
                     <p id="wf_student_name" class="font-bold text-brand-dark">John Doe</p>
                 </div>
                 <div class="space-y-2">
