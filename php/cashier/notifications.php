@@ -4,95 +4,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paxton University - Registrar Notifications</title>
+    <title>Paxton University - Cashier Dashboard</title>
+
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
                     },
                     colors: {
                         brand: {
                             primary: '#344e41',
                             secondary: '#588157',
                             accent: '#dad7cd',
-                            dark: '#202020'
+                            dark: '#202020',
                         }
                     }
-                }
-            }
+                },
+            },
         }
     </script>
 </head>
 
 <body class="bg-gray-50 font-sans text-brand-dark antialiased min-h-screen flex flex-col">
 
-    <!-- Navigation Header with Mobile Menu Support -->
+    <!-- Top Navigation Bar -->
     <header class="bg-white border-b border-gray-200 sticky top-0 z-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <!-- Brand Logo -->
+
+                <!-- Brand Identity -->
                 <div class="flex items-center space-x-3">
-                    <div class="w-9 h-9 bg-brand-primary rounded-md flex items-center justify-center text-white font-bold text-lg">P</div>
+                    <div class="w-9 h-9 bg-brand-primary rounded-md flex items-center justify-center text-white font-bold text-lg shadow-xs">
+                        P
+                    </div>
                     <div>
                         <span class="text-base font-bold text-brand-dark tracking-tight block leading-none">PAXTON</span>
                         <span class="text-[10px] uppercase font-semibold text-gray-500 tracking-widest block mt-0.5">University SSIS</span>
                     </div>
                 </div>
 
-                <!-- Desktop Navigation Links (Hidden on Mobile) -->
-                <nav class="hidden lg:flex items-center space-x-1 text-xs">
-                    <a href="enrollment.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Enrollment</a>
-                    <a href="grades.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Grades</a>
-                    <a href="documentRequest.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Document Requests</a>
-                    <a href="clearance.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Clearance</a>
-                    <a href="notifications.php" class="block px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30">Notifications</a>
+                <!-- Desktop Navigation Links (Cashier Role) -->
+                <nav class="hidden lg:flex items-center space-x-1">
+                    <a href="dashboard.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Dashboard</a>
+                    <a href="payments.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Payments & Reports</a>
+                    <a href="clearance.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brand-primary hover:bg-gray-100 transition-colors">Clearance</a>
+                    <a href="clearance.php" class="px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30 border border-brand-secondary/20">Notifications</a>
                 </nav>
 
-                <!-- Profile Info & Mobile Toggle -->
+                <!-- Action Controls -->
                 <div class="flex items-center space-x-3">
-                    <div class="hidden lg:flex items-center space-x-2">
+                    <div class="h-5 w-px bg-gray-200 hidden md:block"></div>
+
+                    <!-- User Info / Profile -->
+                    <div class="hidden md:flex items-center space-x-2">
                         <div class="text-right">
-                            <p class="text-xs font-semibold text-brand-dark">Registrar Staff</p>
-                            <p class="text-[10px] text-gray-500 uppercase font-bold">Registrar Module</p>
+                            <p id="nav_staff_name" class="text-xs font-semibold text-brand-dark">Maria Santos</p>
+                            <p id="nav_staff_role" class="text-[10px] text-gray-500">Cashier Officer</p>
                         </div>
+                        <a href="logout.php" id="nav_logout_btn" class="p-2 text-gray-400 hover:text-red-600 rounded-md hover:bg-gray-100 transition-colors" title="Log Out">
+                            <i data-lucide="log-out" class="w-5 h-5"></i>
+                        </a>
                     </div>
 
-                    <!-- Mobile Menu Button (Visible only on small screens) -->
-                    <button type="button" id="btn_mobile_menu" class="lg:hidden p-2 rounded-md text-gray-500 hover:text-brand-dark hover:bg-gray-100 focus:outline-none">
-                        <i data-lucide="menu" id="icon_menu_open" class="w-6 h-6"></i>
-                        <i data-lucide="x" id="icon_menu_close" class="w-6 h-6 hidden"></i>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile_menu_btn" type="button" class="md:hidden p-2 rounded-md text-gray-600 hover:text-brand-primary hover:bg-gray-100 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Navigation Dropdown Container -->
-        <div id="mobile_nav_menu" class="hidden lg:hidden border-t border-gray-200 bg-white px-4 pt-2 pb-4 space-y-1 text-xs shadow-md">
-            <a href="enrollment.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Enrollment</a>
-            <a href="grades.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Grades</a>
-            <a href="documentRequest.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Document Requests</a>
-            <a href="clearance.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Clearance</a>
-            <a href="notifications.php" class="block px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30">Notifications</a>
-
-            <div class="pt-3 border-t border-gray-100 flex items-center justify-between px-3">
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile_menu" class="hidden md:hidden border-t border-gray-200 bg-white px-4 pt-2 pb-4 space-y-1">
+            <a href="dashboard.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Dashboard</a>
+            <a href="payments.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Payments & Reports</a>
+            <a href="clearance.php" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Clearance</a>
+            <a href="notifications.php" class="block px-3 py-2 rounded-md text-base font-semibold text-brand-primary bg-brand-accent/30">Notifications</a>
+            <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
                 <div>
-                    <p class="text-xs font-semibold text-brand-dark">Registrar Staff</p>
-                    <p class="text-[10px] text-gray-500 uppercase font-bold">Registrar Module</p>
+                    <p class="text-sm font-semibold text-brand-dark">Maria Santos</p>
+                    <p class="text-xs text-gray-500">Cashier Officer</p>
                 </div>
                 <a href="logout.php" class="text-xs text-red-600 font-semibold hover:underline">Log Out</a>
             </div>
         </div>
     </header>
 
-    <main class="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+    <!-- Main Content Container -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
         <!-- Filter & Search Toolbar -->
         <div class="bg-white border border-gray-200 rounded-md p-4 shadow-xs flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="flex flex-wrap items-center gap-2 w-full md:w-auto">
@@ -217,34 +233,40 @@
                 </div>
             </div>
         </section>
+
     </main>
 
+    <!-- Formal Footer -->
     <footer class="bg-white border-t border-gray-200 mt-12 py-6 text-center text-xs text-gray-500">
-        <p>Paxton University Student Services Information System (SSIS) &copy; 2026. All Rights Reserved.</p>
+        <div class="max-w-7xl mx-auto px-4">
+            <p>Paxton University Student Services Information System (SSIS) &copy; 2026. All Rights Reserved.</p>
+        </div>
     </footer>
+
+    <!-- Interactive Scripts -->
     <script>
-        lucide.createIcons();
+        $(document).ready(function() {
+            lucide.createIcons();
 
-        $('#btn_mobile_menu').on('click', function() {
-            $('#mobile_nav_menu').toggleClass('hidden');
-            $('#icon_menu_open').toggleClass('hidden');
-            $('#icon_menu_close').toggleClass('hidden');
-        });
+            $('#mobile_menu_btn').on('click', function() {
+                $('#mobile_menu').toggleClass('hidden');
+            });
 
-        // Mark single notification as read UI handler
-        $('.btn-mark-read').on('click', function() {
-            const $item = $(this).closest('.notification-item');
-            $item.removeClass('unread bg-brand-accent/20 bg-emerald-50/60 border-l-4 border-l-brand-primary border-l-emerald-600')
-                .addClass('read bg-white border border-gray-200 opacity-90');
-            $item.find('.bg-red-600').remove();
-            $(this).replaceWith('<span class="text-[10px] font-semibold text-gray-400 uppercase tracking-wider">Read</span>');
-        });
+            // Mark single notification as read UI handler
+            $('.btn-mark-read').on('click', function() {
+                const $item = $(this).closest('.notification-item');
+                $item.removeClass('unread bg-brand-accent/20 bg-emerald-50/60 border-l-4 border-l-brand-primary border-l-emerald-600')
+                    .addClass('read bg-white border border-gray-200 opacity-90');
+                $item.find('.bg-red-600').remove();
+                $(this).replaceWith('<span class="text-[10px] font-semibold text-gray-400 uppercase tracking-wider">Read</span>');
+            });
 
-        // Mark all notifications as read UI handler
-        $('#btn_mark_all_read').on('click', function() {
-            $('.btn-mark-read').trigger('click');
-            $('#badge_unread_total').text('0 Unread').removeClass('bg-red-100 text-red-700').addClass('bg-gray-100 text-gray-600');
-            $('#nav_unread_count').remove();
+            // Mark all notifications as read UI handler
+            $('#btn_mark_all_read').on('click', function() {
+                $('.btn-mark-read').trigger('click');
+                $('#badge_unread_total').text('0 Unread').removeClass('bg-red-100 text-red-700').addClass('bg-gray-100 text-gray-600');
+                $('#nav_unread_count').remove();
+            });
         });
     </script>
 </body>
