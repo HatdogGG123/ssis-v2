@@ -275,84 +275,125 @@
             <!-- Payments Table -->
             <div class="bg-white border border-gray-200 rounded-md shadow-xs overflow-hidden">
                 <div class="overflow-x-auto">
-                    <table id="table_payments" class="w-full text-left text-xs border-collapse">
-                        <thead>
-                            <tr class="bg-gray-50/80 border-b border-gray-100 text-gray-500 uppercase tracking-wider font-semibold">
-                                <th class="py-3 px-4">Request No</th>
-                                <th class="py-3 px-4">Student Info</th>
-                                <th class="py-3 px-4">Document Type</th>
-                                <th class="py-3 px-4">Method & Reference</th>
-                                <th class="py-3 px-4 text-right">Amount</th>
-                                <th class="py-3 px-4 text-center">Status</th>
-                                <th class="py-3 px-4 text-right">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-100 text-gray-700 font-medium">
-                            <tr class="hover:bg-gray-50/50 transition-colors">
-                                <td class="py-3.5 px-4 font-bold text-brand-dark">DR-2026-0012</td>
-                                <td class="py-3.5 px-4">
-                                    <div class="font-bold text-brand-dark">Juan Dela Cruz</div>
-                                    <div class="text-[10px] text-gray-500">2026-00045</div>
-                                </td>
-                                <td class="py-3.5 px-4">Transcript of Records (2 copies)</td>
-                                <td class="py-3.5 px-4">
-                                    <span class="font-semibold text-gray-800">GCash</span>
-                                    <span class="block text-[10px] font-mono text-gray-500">Ref: 9021849201</span>
-                                </td>
-                                <td class="py-3.5 px-4 text-right font-bold text-brand-dark">₱150.00</td>
-                                <td class="py-3.5 px-4 text-center">
-                                    <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-blue-100 text-blue-800">Pending Verification</span>
-                                </td>
-                                <td class="py-3.5 px-4 text-right space-x-1">
-                                    <button onclick="openVerifyModal('DR-2026-0012', 'Juan Dela Cruz (2026-00045)', 'Transcript of Records (2 copies)', 'GCash', '9021849201', '150.00')" class="px-2.5 py-1 bg-emerald-700 text-white rounded text-[11px] font-semibold hover:bg-emerald-800 transition-colors">
-                                        Verify
-                                    </button>
-                                    <button onclick="openRejectModal('DR-2026-0012')" class="px-2.5 py-1 bg-red-600 text-white rounded text-[11px] font-semibold hover:bg-red-700 transition-colors">Reject</button>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50/50 transition-colors">
-                                <td class="py-3.5 px-4 font-bold text-brand-dark">DR-2026-0018</td>
-                                <td class="py-3.5 px-4">
-                                    <div class="font-bold text-brand-dark">Maria Clara</div>
-                                    <div class="text-[10px] text-gray-500">2026-00088</div>
-                                </td>
-                                <td class="py-3.5 px-4">Good Moral Certificate</td>
-                                <td class="py-3.5 px-4">
-                                    <span class="font-semibold text-gray-800">Bank Transfer</span>
-                                    <span class="block text-[10px] font-mono text-gray-500">Ref: UB-8830192</span>
-                                </td>
-                                <td class="py-3.5 px-4 text-right font-bold text-brand-dark">₱300.00</td>
-                                <td class="py-3.5 px-4 text-center">
-                                    <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-blue-100 text-blue-800">Pending Verification</span>
-                                </td>
-                                <td class="py-3.5 px-4 text-right space-x-1">
-                                    <button onclick="openVerifyModal('DR-2026-0012', 'Juan Dela Cruz (2026-00045)', 'Transcript of Records (2 copies)', 'GCash', '9021849201', '150.00')" class="px-2.5 py-1 bg-emerald-700 text-white rounded text-[11px] font-semibold hover:bg-emerald-800 transition-colors">
-                                        Verify
-                                    </button>
-                                    <button onclick="openRejectModal('DR-2026-0018')" class="px-2.5 py-1 bg-red-600 text-white rounded text-[11px] font-semibold hover:bg-red-700 transition-colors">Reject</button>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50/50 transition-colors">
-                                <td class="py-3.5 px-4 font-bold text-brand-dark">DR-2026-0005</td>
-                                <td class="py-3.5 px-4">
-                                    <div class="font-bold text-brand-dark">Pedro Penduko</div>
-                                    <div class="text-[10px] text-gray-500">2026-00012</div>
-                                </td>
-                                <td class="py-3.5 px-4">Certificate of Grades</td>
-                                <td class="py-3.5 px-4">
-                                    <span class="font-semibold text-gray-800">Cash</span>
-                                    <span class="block text-[10px] font-mono text-gray-500">OR: OR-2026-0038</span>
-                                </td>
-                                <td class="py-3.5 px-4 text-right font-bold text-brand-dark">₱100.00</td>
-                                <td class="py-3.5 px-4 text-center">
-                                    <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-100 text-emerald-800">Paid</span>
-                                </td>
-                                <td class="py-3.5 px-4 text-right">
-                                    <button onclick="openRefundModal('DR-2026-0005', 'OR-2026-0038', 100.00)" class="px-2.5 py-1 border border-gray-200 text-red-600 rounded text-[11px] font-semibold hover:bg-red-50 transition-colors">Refund</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <!-- Mobile-Optimized Table Container -->
+                    <div class="bg-white border border-gray-200 rounded-md shadow-xs overflow-hidden">
+                        <div class="overflow-x-auto min-w-full">
+                            <!-- Mobile-Optimized Clearance Table Container -->
+                            <div class="bg-white border border-gray-200 rounded-md shadow-xs overflow-hidden">
+                                <!-- Header Summary -->
+                                <div class="p-3 sm:p-4 border-b border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                                    <div class="flex items-center space-x-2">
+                                        <i data-lucide="list-checks" class="w-4 h-4 text-brand-primary"></i>
+                                        <h2 class="text-sm font-bold text-brand-dark">Student Cashier Clearance Directory</h2>
+                                    </div>
+                                    <span class="text-[11px] text-gray-500">Term: 1st Semester 2026-2027</span>
+                                </div>
+
+                                <!-- Scrollable Table Body -->
+                                <div class="overflow-x-auto min-w-full">
+                                    <table id="table_clearance" class="w-full text-left text-xs border-collapse min-w-[640px]">
+                                        <thead>
+                                            <tr class="bg-gray-50/80 border-b border-gray-100 text-gray-500 uppercase tracking-wider font-semibold">
+                                                <th class="py-3 px-3 w-28 whitespace-nowrap">Student ID</th>
+                                                <th class="py-3 px-3 min-w-[130px] max-w-[160px]">Student Name</th>
+                                                <th class="py-3 px-3 min-w-[140px] max-w-[180px]">Program & Year</th>
+                                                <th class="py-3 px-3 w-24 text-right whitespace-nowrap">Unpaid Balance</th>
+                                                <th class="py-3 px-3 min-w-[160px] max-w-[220px]">Hold Reason / Item</th>
+                                                <th class="py-3 px-3 w-28 text-center whitespace-nowrap">Clearance Status</th>
+                                                <th class="py-3 px-3 w-32 text-right whitespace-nowrap">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-gray-100 text-gray-700 font-medium">
+                                            <!-- Row 1: Uncleared (On Hold) -->
+                                            <tr class="hover:bg-gray-50/50 transition-colors">
+                                                <td class="py-3 px-3 font-mono font-bold text-brand-dark whitespace-nowrap">2026-00012</td>
+                                                <td class="py-3 px-3 min-w-[130px] max-w-[160px]">
+                                                    <div class="font-bold text-brand-dark truncate" title="Pedro Penduko">Pedro Penduko</div>
+                                                </td>
+                                                <td class="py-3 px-3 min-w-[140px] max-w-[180px]">
+                                                    <div class="truncate text-gray-600" title="BS Computer Science (3rd Yr)">BS Computer Science (3rd Yr)</div>
+                                                </td>
+                                                <td class="py-3 px-3 text-right font-bold text-red-700 whitespace-nowrap">₱2,450.00</td>
+                                                <td class="py-3 px-3 min-w-[160px] max-w-[220px]">
+                                                    <div class="font-semibold text-gray-800 truncate" title="Unpaid Tuition Fee Balance">Unpaid Tuition Fee Balance</div>
+                                                    <div class="text-[10px] text-gray-500 truncate" title="Issued by: M. Santos • Oct 1, 2026">Issued by: M. Santos • Oct 1, 2026</div>
+                                                </td>
+                                                <td class="py-3 px-3 text-center whitespace-nowrap">
+                                                    <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-semibold bg-amber-100 text-amber-800">Uncleared (Hold)</span>
+                                                </td>
+                                                <td class="py-3 px-3 text-right whitespace-nowrap space-x-1">
+                                                    <button onclick="openReleaseModal('CLEAR-2026-001', 'Pedro Penduko', '2026-00012', 2450.00)" class="px-2 py-1 bg-emerald-700 text-white rounded text-[11px] font-semibold hover:bg-emerald-800 transition-colors">Clear</button>
+                                                    <button onclick="openDetailsModal('2026-00012', 'Pedro Penduko', '2,450.00', 'Unpaid Tuition Fee Balance', 'Uncleared')" class="px-2 py-1 border border-gray-200 text-gray-600 rounded text-[11px] font-semibold hover:bg-gray-50 transition-colors">View</button>
+                                                </td>
+                                            </tr>
+
+                                            <!-- Row 2: Pending Review -->
+                                            <tr class="hover:bg-gray-50/50 transition-colors">
+                                                <td class="py-3 px-3 font-mono font-bold text-brand-dark whitespace-nowrap">2026-00045</td>
+                                                <td class="py-3 px-3 min-w-[130px] max-w-[160px]">
+                                                    <div class="font-bold text-brand-dark truncate" title="Juan Dela Cruz">Juan Dela Cruz</div>
+                                                </td>
+                                                <td class="py-3 px-3 min-w-[140px] max-w-[180px]">
+                                                    <div class="truncate text-gray-600" title="BS Information Technology (2nd Yr)">BS Info Tech (2nd Yr)</div>
+                                                </td>
+                                                <td class="py-3 px-3 text-right font-bold text-blue-700 whitespace-nowrap">₱150.00</td>
+                                                <td class="py-3 px-3 min-w-[160px] max-w-[220px]">
+                                                    <div class="font-semibold text-gray-800 truncate" title="Document Processing Fee">Document Processing Fee</div>
+                                                    <div class="text-[10px] text-blue-600 font-semibold truncate" title="Proof uploaded (Ref: 9021849201)">Proof uploaded (Ref: 9021849201)</div>
+                                                </td>
+                                                <td class="py-3 px-3 text-center whitespace-nowrap">
+                                                    <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-semibold bg-blue-100 text-blue-800">Pending Review</span>
+                                                </td>
+                                                <td class="py-3 px-3 text-right whitespace-nowrap space-x-1">
+                                                    <a href="payments.php?filter=2026-00045" class="inline-block px-2 py-1 bg-blue-600 text-white rounded text-[11px] font-semibold hover:bg-blue-700 transition-colors">Review</a>
+                                                    <button onclick="openDetailsModal('2026-00045', 'Juan Dela Cruz', '150.00', 'Document Processing Fee', 'Pending Review')" class="px-2 py-1 border border-gray-200 text-gray-600 rounded text-[11px] font-semibold hover:bg-gray-50 transition-colors">View</button>
+                                                </td>
+                                            </tr>
+
+                                            <!-- Row 3: Cleared -->
+                                            <tr class="hover:bg-gray-50/50 transition-colors">
+                                                <td class="py-3 px-3 font-mono font-bold text-brand-dark whitespace-nowrap">2026-00088</td>
+                                                <td class="py-3 px-3 min-w-[130px] max-w-[160px]">
+                                                    <div class="font-bold text-brand-dark truncate" title="Maria Clara">Maria Clara</div>
+                                                </td>
+                                                <td class="py-3 px-3 min-w-[140px] max-w-[180px]">
+                                                    <div class="truncate text-gray-600" title="BS Business Administration (4th Yr)">BS Business Admin (4th Yr)</div>
+                                                </td>
+                                                <td class="py-3 px-3 text-right font-bold text-gray-400 whitespace-nowrap">₱0.00</td>
+                                                <td class="py-3 px-3 min-w-[160px] max-w-[220px]">
+                                                    <span class="text-xs text-gray-400 italic block truncate">No Active Holds</span>
+                                                </td>
+                                                <td class="py-3 px-3 text-center whitespace-nowrap">
+                                                    <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-semibold bg-emerald-100 text-emerald-800">Cleared</span>
+                                                </td>
+                                                <td class="py-3 px-3 text-right whitespace-nowrap">
+                                                    <button onclick="openDetailsModal('2026-00088', 'Maria Clara', '0.00', 'None', 'Cleared')" class="px-2 py-1 border border-gray-200 text-gray-600 rounded text-[11px] font-semibold hover:bg-gray-50 transition-colors">View History</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- Table Pagination Footer -->
+                                <div class="p-3 sm:p-4 bg-gray-50/80 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
+                                    <span>Showing 1 to 3 of 14 records</span>
+                                    <div class="inline-flex items-center space-x-1">
+                                        <button disabled class="px-2.5 py-1 border border-gray-200 rounded text-gray-400 bg-gray-100 cursor-not-allowed">Previous</button>
+                                        <button disabled class="px-2.5 py-1 border border-gray-200 rounded text-gray-400 bg-gray-100 cursor-not-allowed">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Table Pagination -->
+                        <div class="p-3 sm:p-4 bg-gray-50/80 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
+                            <span>Showing 1 to 2 of 2 payment records</span>
+                            <div class="inline-flex items-center space-x-1">
+                                <button disabled class="px-2.5 py-1 border border-gray-200 rounded text-gray-400 bg-gray-100 cursor-not-allowed">Previous</button>
+                                <button disabled class="px-2.5 py-1 border border-gray-200 rounded text-gray-400 bg-gray-100 cursor-not-allowed">Next</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Table Pagination -->
