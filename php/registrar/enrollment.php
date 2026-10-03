@@ -61,9 +61,9 @@
 
                 <!-- Desktop Navigation Links (Updated Registrar Navigation Pages) -->
                 <nav class="hidden lg:flex items-center space-x-1 text-xs">
-                    <a href="enrollment.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Enrollment</a>
+                    <a href="enrollment.php" class="block px-3 py-2 rounded-md text-sm font-semibold text-gray-600 hover:bg-gray-50 bg-brand-accent/30">Enrollment</a>
                     <a href="grades.php" class="block px-3 py-2 rounded-md text-sm font-medium text-brand-primary">Grades</a>
-                    <a href="studentRecords.php" class="block px-3 py-2 rounded-md text-sm font-semibold text-gray-600 hover:bg-gray-50 bg-brand-accent/30">Student Records</a>
+                    <a href="studentRecords.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Student Records</a>
                     <a href="clearance.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Clearance</a>
                     <a href="documentRequest.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Document Requests</a>
                     <a href="announcements.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Announcements</a>
@@ -102,8 +102,8 @@
 
         <!-- Mobile & Tablet Menu Dropdown (Updated Registrar Navigation Pages) -->
         <div id="mobile_menu" class="hidden lg:hidden border-t border-gray-200 bg-white px-4 pt-2 pb-4 space-y-1">
-            <a href="enrollment.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Enrollment</a>
-            <a href="grades.php" class="block px-3 py-2 rounded-md text-sm font-semibold text-brand-primary bg-brand-accent/30">Grades</a>
+            <a href="enrollment.php" class="block px-3 py-2 rounded-md text-sm font-semibold text-gray-600 hover:bg-gray-50 bg-brand-accent/30">Enrollment</a>
+            <a href="grades.php" class="block px-3 py-2 rounded-md text-sm font-medium text-brand-primary">Grades</a>
             <a href="studentRecords.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Student Records</a>
             <a href="clearance.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Clearance</a>
             <a href="documentRequest.php" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50">Document Requests</a>
