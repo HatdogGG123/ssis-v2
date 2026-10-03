@@ -19,7 +19,7 @@
 
     <!-- Top Logo Button -->
     <header class="relative z-10 px-8 py-8 md:px-12">
-        <a href="index.php" class="w-10 h-10 rounded-xl border border-brand-accent/30 backdrop-blur-md bg-brand-primary/40 flex items-center justify-center shadow-lg hover:border-brand-accent transition">
+        <a href="index.php" class="w-10 h-10 rounded-md border border-brand-accent/30 backdrop-blur-md bg-brand-primary/40 flex items-center justify-center shadow-lg hover:border-brand-accent transition">
             <svg class="lucide lucide-arrow-left preview-icon size-5 text-white" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="m12 19-7-7 7-7" />
                 <path d="M19 12H5" />
@@ -32,7 +32,7 @@
         <div class="w-full max-w-sm">
 
             <!-- Card Container in Accent Color (#dad7cd) -->
-            <div class="bg-brand-accent rounded-3xl p-8 shadow-2xl border border-brand-accent/20">
+            <div class="bg-brand-accent rounded-xl p-8 shadow-2xl border border-brand-accent/20">
 
                 <!-- Header Text -->
                 <div class="text-center space-y-1 mb-8">
@@ -41,7 +41,7 @@
                 </div>
 
                 <!-- Alert Box Placeholder -->
-                <div id="alert-box" class="mb-6 p-3 rounded-xl bg-red-100 border border-red-300 text-red-700 text-xs flex items-center space-x-2">
+                <div id="alert-box" class="mb-6 p-3 rounded-md bg-red-100 border border-red-300 text-red-700 text-xs flex items-center space-x-2">
                     <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0 1 18 0z" />
                     </svg>
@@ -65,7 +65,7 @@
                             name="username"
                             required
                             placeholder="e.g. 2026-00001 or admin"
-                            class="w-full px-4 py-3 rounded-xl border border-brand-primary/20 bg-white/70 text-brand-dark text-xs placeholder-brand-primary/50 focus:outline-none focus:bg-white focus:ring-2 focus:ring-brand-primary transition" />
+                            class="w-full px-4 py-3 rounded-md border border-brand-primary/20 bg-white/70 text-brand-dark text-xs placeholder-brand-primary/50 focus:outline-none focus:bg-white focus:ring-2 focus:ring-brand-primary transition" />
                     </div>
 
                     <!-- Password Field -->
@@ -79,12 +79,12 @@
                             name="password"
                             required
                             placeholder="••••••••••••"
-                            class="w-full px-4 py-3 rounded-xl border border-brand-primary/20 bg-white/70 text-brand-dark text-xs placeholder-brand-primary/50 focus:outline-none focus:bg-white focus:ring-2 focus:ring-brand-primary transition" />
+                            class="w-full px-4 py-3 rounded-md border border-brand-primary/20 bg-white/70 text-brand-dark text-xs placeholder-brand-primary/50 focus:outline-none focus:bg-white focus:ring-2 focus:ring-brand-primary transition" />
                     </div>
 
                     <!-- Forgot Password Link -->
                     <div class="text-right pt-1">
-                        <a href="forgot_password.php" class="text-xs font-semibold text-brand-primary hover:text-brand-dark hover:underline">
+                        <a href="forgotPassword.php" class="text-xs font-semibold text-brand-primary hover:text-brand-dark hover:underline">
                             Forgot password?
                         </a>
                     </div>
@@ -92,7 +92,7 @@
                     <button
                         type="submit"
                         id="btn-submit"
-                        class="w-full mt-2 bg-brand-primary hover:bg-brand-secondary text-brand-accent font-semibold py-3 px-6 rounded-xl transition duration-200 shadow-md text-xs tracking-wide flex items-center justify-center space-x-2">
+                        class="w-full mt-2 bg-brand-primary hover:bg-brand-secondary text-brand-accent font-semibold py-3 px-6 rounded-md transition duration-200 shadow-md text-xs tracking-wide flex items-center justify-center space-x-2">
                         <span>Sign in</span>
                     </button>
 
