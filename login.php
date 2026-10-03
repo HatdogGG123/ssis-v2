@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include("/php/includes/head.php"); ?>
+<?php include("php/includes/head.php"); ?>
 
 <body class="font-sans antialiased text-brand-dark min-h-screen relative flex flex-col justify-between overflow-x-hidden bg-brand-dark">
 
@@ -20,8 +20,9 @@
     <!-- Top Logo Button -->
     <header class="relative z-10 px-8 py-8 md:px-12">
         <a href="index.php" class="w-10 h-10 rounded-xl border border-brand-accent/30 backdrop-blur-md bg-brand-primary/40 flex items-center justify-center shadow-lg hover:border-brand-accent transition">
-            <svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            <svg class="lucide lucide-arrow-left preview-icon size-5 text-white" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m12 19-7-7 7-7" />
+                <path d="M19 12H5" />
             </svg>
         </a>
     </header>
@@ -40,7 +41,7 @@
                 </div>
 
                 <!-- Alert Box Placeholder -->
-                <div id="alert-box" class="hidden mb-6 p-3 rounded-xl bg-red-100 border border-red-300 text-red-700 text-xs flex items-center space-x-2">
+                <div id="alert-box" class="mb-6 p-3 rounded-xl bg-red-100 border border-red-300 text-red-700 text-xs flex items-center space-x-2">
                     <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0 1 18 0z" />
                     </svg>
@@ -98,14 +99,6 @@
                 </form>
 
             </div>
-
-            <!-- Footer Note -->
-            <div class="mt-6 text-center">
-                <p class="text-xs text-brand-accent/80 font-medium">
-                    Need an account? <span class="font-semibold text-brand-accent underline cursor-pointer">Contact the Registrar</span>
-                </p>
-            </div>
-
         </div>
     </main>
 

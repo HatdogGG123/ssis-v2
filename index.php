@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
+<?php include("php/includes/head.php") ?>
 
 <body class="font-sans antialiased text-white bg-brand-dark min-h-screen">
 
